@@ -40,11 +40,24 @@ html, body{
 
 /*Circle wrapper*/
 .wrapper{
-	height:768px;
+	height:500px;
 	width:1024px;
+	padding: 0;
 	margin: 0 auto;
 	position: relative;
 	/*background-color: white;*/
+}
+
+@media only screen and (max-width: 1366px){
+	.wrapper{
+		top: -50px;
+		-webkit-transform: scale(0.9,0.9);
+		-moz-transform: scale(0.9,0.9);
+		-o-transform: scale(0.9,0.9);
+		-ms-transform: scale(0.9,0.9);
+		transform: scale(0.9,0.9);
+		/*background-color: white;*/
+	}
 }
 
 /*Circle style*/
