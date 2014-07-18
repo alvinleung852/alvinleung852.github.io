@@ -24,6 +24,7 @@ html, body{
 	left: 10px;
 	top: 10px;
 	cursor: default;
+	z-index: 99;
 }
 .name_content{
 	float:left;
@@ -288,9 +289,17 @@ h3{
 	font-size: 30pt;
 }
 
+.content_wrapper{
+	width: 100%;
+}
+
 /*content cross navigation*/
 .nav_wrapper{
 	width:100%;	
+	position: absolute;
+	z-index: 99;
+	bottom: 0;
+	color: white;
 }
 .nav_item{
 	height: 50px;
@@ -313,6 +322,9 @@ h3{
 .close_content{
 	position: absolute;
 	right: 5px;
-	bottom: 0;
+	top: 0;
 }
 
+.filler{
+	height: 75px;
+}
