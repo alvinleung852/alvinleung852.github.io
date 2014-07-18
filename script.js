@@ -41,6 +41,7 @@ $(document).ready(function() {
 
 	//navigate across section function
     $('.cross_link').click(function() {	
+        $('.' + lastContent + '_content').fadeOut(350);    
     	$('.' + lastContent + '_content').animate({
             height: '0%',
             }, 350, function() {
