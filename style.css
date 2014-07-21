@@ -341,3 +341,14 @@ h3{
 .filler{
 	height: 75px;
 }
+
+.scrollable_content{
+	overflow-x: hidden;
+	/*height: 100%;*/
+	overflow-y: scroll;
+	
+}
+/*
+.asdf p{
+	position: relative;
+}*/

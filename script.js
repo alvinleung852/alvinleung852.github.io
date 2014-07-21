@@ -2,6 +2,12 @@ $(document).ready(function() {
 	// hide content on load
 	$('.content').hide();
     $('.nav_wrapper').hide();
+
+    //change height of blog content
+    var screenHeight = $(window).height();
+    // alert(screenHeight);
+    $('.scrollable_content').height(screenHeight - 125 + 'px');
+
 	//remember the last content page visited
 	var lastContent;
 	var temp; 
@@ -15,7 +21,7 @@ $(document).ready(function() {
 		$('.' + temp[0] + '_content').show();
 		$('.' + temp[0] + '_content').animate({
             height: '100%',
-            }, 350, function() {
+            }, 300, function() {
         }); 
         $('.nav_wrapper').fadeIn(350);    
         $('.wrapper').slideToggle(400);   
@@ -29,7 +35,7 @@ $(document).ready(function() {
         });	
         $('.content').animate({
             height: '0%',
-            }, 350, function() {
+            }, 300, function() {
         });
         $('.nav_wrapper').fadeOut(350);
         $('.content').hide(350);  
@@ -65,3 +71,9 @@ $(document).ready(function() {
     });
 });
 
+// change blog screen height on screen resize
+$(window).resize(function(){
+    var screenHeight = $(window).height();
+    // alert(screenHeight);
+    $('.scrollable_content').height(screenHeight - 125 + 'px');
+});
