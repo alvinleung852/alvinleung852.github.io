@@ -2,7 +2,7 @@
 /* CSS Document */
 
 html{
-	background: url(images/mountain5.jpg) no-repeat center center fixed;
+	background: url(../images/forest3.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -140,7 +140,7 @@ html, body{
 /*about link/ring hover effect*/
 .about_link:hover,
 .about_link:focus{	
-	background-image: url(images/home_about2_o.png);
+	background-image: url(../images/home_about2_o.png);
 }
 .about_link:hover + .about_ring{
 	opacity: 1;	
@@ -155,7 +155,7 @@ html, body{
 /*blog link/ring hover effect*/
 .blog_link:hover,
 .blog_link:focus{	
-	background-image: url(images/home_blog_o.png);
+	background-image: url(../images/home_blog_o.png);
 }
 .blog_link:hover + .blog_ring{
 	opacity: 1;	
@@ -170,7 +170,7 @@ html, body{
 /*portfolio link/ring hover effect*/
 .port_link:hover,
 .port_link:focus{	
-	background-image: url(images/home_port_o.png);
+	background-image: url(../images/home_port_o.png);
 }
 .port_link:hover + .port_ring{
 	opacity: 1;	
@@ -185,7 +185,7 @@ html, body{
 /*contact link/ring hover effect*/
 .contact_link:hover,
 .contact_link:focus{	
-	background-image: url(images/home_contact_o.png);
+	background-image: url(../images/home_contact_o.png);
 }
 .contact_link:hover + .contact_ring{
 	opacity: 1;	
@@ -203,7 +203,7 @@ html, body{
 	margin-left: 75px;	
 	height:286px;
 	width:286px;
-	background-image: url(images/home_about2_n.png);
+	background-image: url(../images/home_about2_n.png);
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -213,7 +213,7 @@ html, body{
 	margin-left: 550px;
 	height:220px;
 	width:220px;
-	background-image: url(images/home_blog_n.png);
+	background-image: url(../images/home_blog_n.png);
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -223,7 +223,7 @@ html, body{
 	margin-left: 275px;
 	height:369px;
 	width:369px;
-	background-image: url(images/home_port_n.png);
+	background-image: url(../images/home_port_n.png);
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -233,7 +233,7 @@ html, body{
 	margin-left: 700px;
 	height:252px;
 	width:252px;
-	background-image: url(images/home_contact_n.png);
+	background-image: url(../images/home_contact_n.png);
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -278,7 +278,7 @@ html, body{
 }
 
 /*headers*/
-h1{
+.nav_wrapper h1{
 	padding: 0px;
 	margin: 0px;
 	cursor: pointer;
@@ -336,19 +336,78 @@ h3{
 	position: absolute;
 	right: 5px;
 	top: 0;
+	webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.close_content:hover{
+	transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	-webkit-transform:rotate(360deg);
 }
 
 .filler{
 	height: 75px;
 }
 
+.blog_timeline{
+	float: left;
+	width: 15%;
+	font-family: 'Roboto', sans-serif;
+}
+
+.blog_timeline li{
+	cursor: pointer;
+}
+
 .scrollable_content{
+	float: left;
+	width: 85%;
 	overflow-x: hidden;
 	/*height: 100%;*/
-	overflow-y: scroll;
-	
+	overflow-y: scroll;	
+	display:none;
+	font-family: 'Roboto', sans-serif;
 }
-/*
-.asdf p{
-	position: relative;
-}*/
+
+.months{
+	display: none;
+}
+
+.selected_year{
+	display: inline;
+}
+
+a{
+	display:block;
+	padding: 0;
+    color:white;
+    text-decoration: none;
+}
+
+a:visited {
+    color:white;
+}
+
+a:hover {
+    color:white;
+}
+
+a:active {
+    color:white;
+}
+
+.portfolio_gallery{
+	/*float: left;*/
+	overflow-x: hidden;
+	/*height: 100%;*/
+	overflow-y: scroll;	
+	font-family: 'Roboto', sans-serif;
+}
+
+#mygallery a{
+	cursor: pointer;
+}

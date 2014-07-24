@@ -3,11 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Alvin Leung</title>
-	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
-	<script type="text/javascript" src="script.js"></script>
+	<script type='text/javascript' src='js/jquery.min.js'></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="js/jquery.justifiedGallery.js"></script>
+	<link rel="stylesheet" href="css/justifiedGallery.css" />
 	<link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>	
 </head>
 <body>
 	<div class="name">
@@ -35,120 +38,275 @@
 			<div class="contact cross_link nav_item"><h1>CONTACT</h1></div>
 		</div>
 
-		<div class="content about_content">
-			<!-- <div class="nav_wrapper">
-				<div class="nav_item"><h2>ABOUT</h2></div>
-				<div class="port cross_link nav_item"><h1>PORTFOLIO</h1></div>
-				<div class="blog cross_link nav_item"><h1>BLOG</h1></div>
-				<div class="contact cross_link nav_item"><h1>CONTACT</h1></div>
-			</div> -->
-			<div class="filler"></div>
+		<div class="content about_content">			
 			<div class="close_content"><h3>X</h3></div>
-			
-			<p></p>			
+			<div class="filler"></div>					
 		</div>
 
 		<div class="content port_content">
 			<div class="close_content"><h3>X</h3></div>
-			<!-- <div class="nav_wrapper">
-				<div class="about cross_link nav_item"><h1>ABOUT</h1></div>
-				<div class="nav_item"><h2>PORTFOLIO</h2></div>
-				<div class="blog cross_link nav_item"><h1>BLOG</h1></div>
-				<div class="contact cross_link nav_item"><h1>CONTACT</h1></div>
-			</div> -->
 			<div class="filler"></div>
-			<p>Bacon ipsum dolor sit amet pork frankfurter filet mignon flank, capicola meatloaf prosciutto chicken chuck pastrami. Salami chuck jowl ball tip strip steak meatloaf. T-bone boudin jowl pork, ground round prosciutto pork belly meatloaf corned beef porchetta flank jerky. Cow filet mignon flank corned beef. Frankfurter tenderloin kevin jerky bresaola t-bone bacon porchetta shank hamburger landjaeger doner strip steak pancetta turducken. Fatback sausage turducken leberkas short loin filet mignon.
-
-			Pastrami tenderloin drumstick, sausage pork loin ham bresaola pork pancetta tri-tip ham hock. Ground round cow hamburger leberkas t-bone. Tri-tip drumstick venison pig chicken beef, shoulder sausage. Pastrami turkey boudin, ribeye brisket turducken filet mignon.
-
-			Ribeye swine jowl, ball tip pancetta tri-tip brisket turkey doner. Kielbasa meatball meatloaf hamburger ground round ribeye kevin strip steak doner. Swine kielbasa doner fatback leberkas, bresaola turducken. Short loin kielbasa jerky shoulder venison ham hock short ribs sirloin fatback ball tip ground round pork chop. Landjaeger short ribs ham turducken, drumstick turkey pork tri-tip doner sausage cow ground round corned beef tenderloin frankfurter. Turducken brisket rump hamburger.
-
-			Rump hamburger meatloaf, ham hock chuck jerky tongue porchetta salami short loin prosciutto venison bresaola. Tri-tip pork loin swine, ground round beef ribs hamburger jerky. Ball tip tongue spare ribs, pork loin bacon sirloin frankfurter prosciutto tail short ribs. Bacon brisket landjaeger, leberkas andouille boudin meatball pork venison beef biltong tail ham hock. Tongue fatback capicola drumstick boudin shankle, ball tip swine bacon kevin ground round pork. Ham ground round meatloaf, hamburger leberkas sirloin jowl pancetta bacon pig flank.
-
-			Venison turducken brisket doner drumstick ribeye sausage biltong pastrami ham hamburger. Shank ham hock bresaola spare ribs ground round frankfurter. Swine t-bone sausage capicola ham turducken. Frankfurter pork belly hamburger capicola pig pork chop, jerky chicken filet mignon flank pork venison. Sausage jowl ribeye, shankle filet mignon landjaeger tri-tip cow biltong meatloaf ham hock.
-
-			Does your lorem ipsum text long for something a little meatier? Give our generator a try… it’s tasty!</p>			
+			<div class="portfolio_gallery">
+				<div id="mygallery" >
+						<a class="blog Jul13 blogJump 2013 cross_link">
+					    	<img alt="Title 1" src="thumbnails/1.jpg"/>
+						</a>
+					  	<a class="blog Jul12 blogJump 2012 cross_link">
+					    	<img alt="Title 1" src="thumbnails/2.jpg"/>
+						</a>
+						<a class="blog Jan13 blogJump 2013 cross_link">
+					    	<img alt="Title 1" src="thumbnails/3.jpg"/>
+						</a>
+						<a class="blog Dec14 blogJump 2014 cross_link">
+					    	<img alt="Title 1" src="thumbnails/4.jpg"/>
+						</a>
+						<a class="blog Feb14 blogJump 2014 cross_link">
+					    	<img alt="Title 1" src="thumbnails/5.jpg"/>
+						</a>
+					  	<a class="blog May12 blogJump 2012 cross_link">
+					    	<img alt="Title 1" src="thumbnails/city2.jpg"/>
+						</a>
+						<a class="blog Nov13 blogJump 2013 cross_link">
+					    	<img alt="Title 1" src="thumbnails/city3.jpg"/>
+						</a>
+						<a class="blog Mar14 blogJump 2014 cross_link">
+					    	<img alt="Title 1" src="thumbnails/city4.jpg"/>
+						</a>
+						<a class="blog Oct12 blogJump 2012 cross_link">
+					    	<img alt="Title 1" src="thumbnails/city5.jpg"/>
+						</a>
+						<a class="blog Sep13 blogJump 2013 cross_link">
+					    	<img alt="Title 1" src="thumbnails/mountain5.jpg"/>
+						</a>
+						<a class="blog Aug14 blogJump 2014 cross_link">
+					    	<img alt="Title 1" src="thumbnails/city6.jpg"/>
+						</a>
+						<a class="blog Jul13 blogJump 2013 cross_link">
+					    	<img alt="Title 1" src="thumbnails/1.jpg"/>
+						</a>
+					  	<a class="blog Jul12 blogJump 2012 cross_link">
+					    	<img alt="Title 1" src="thumbnails/2.jpg"/>
+						</a>
+						<a class="blog Jan13 blogJump 2013 cross_link">
+					    	<img alt="Title 1" src="thumbnails/3.jpg"/>
+						</a>
+						<a class="blog Dec14 blogJump 2014 cross_link">
+					    	<img alt="Title 1" src="thumbnails/4.jpg"/>
+						</a>
+						<a class="blog Feb14 blogJump 2014 cross_link">
+					    	<img alt="Title 1" src="thumbnails/5.jpg"/>
+						</a>
+					  	<a class="blog May12 blogJump 2012 cross_link">
+					    	<img alt="Title 1" src="thumbnails/city2.jpg"/>
+						</a>
+						<a class="blog Nov13 blogJump 2013 cross_link">
+					    	<img alt="Title 1" src="thumbnails/city3.jpg"/>
+						</a>
+						<a class="blog Mar14 blogJump 2014 cross_link">
+					    	<img alt="Title 1" src="thumbnails/city4.jpg"/>
+						</a>
+						<a class="blog Oct12 blogJump 2012 cross_link">
+					    	<img alt="Title 1" src="thumbnails/city5.jpg"/>
+						</a>
+						<a class="blog Sep13 blogJump 2013 cross_link">
+					    	<img alt="Title 1" src="thumbnails/mountain5.jpg"/>
+						</a>
+						<a class="blog Aug14 blogJump 2014 cross_link">
+					    	<img alt="Title 1" src="thumbnails/city6.jpg"/>
+						</a>
+					  <!-- other images... -->
+				</div>
+			</div>
 		</div>
 
 		<div class="content blog_content">
 			<div class="close_content"><h3>X</h3></div>
-			<!-- <div class="nav_wrapper">
-				<div class="about cross_link nav_item"><h1>ABOUT</h1></div>
-				<div class="port cross_link nav_item"><h1>PORTFOLIO</h1></div>
-				<div class="nav_item"><h2>BLOG</h2></div>
-				<div class="contact cross_link nav_item"><h1>CONTACT</h1></div>
-			</div> -->
 			<div class="filler"></div>
-			<div class="scrollable_content">
+			<div class="blog_timeline">
+				<ul>
+					<li class="2012 years" style="font-weight: bold;">2012</li>
+					<ul id="2012months" class="months">
+						<a onclick="document.getElementById('Jan12').scrollIntoView()"><li>January</li></a>
+						<a onclick="document.getElementById('Feb12').scrollIntoView()"><li>February</li></a>
+						<a onclick="document.getElementById('Mar12').scrollIntoView()"><li>March</li></a>
+						<a onclick="document.getElementById('Apr12').scrollIntoView()"><li>April</li></a>
+						<a onclick="document.getElementById('May12').scrollIntoView()"><li>May</li></a>
+						<a onclick="document.getElementById('Jun12').scrollIntoView()"><li>June</li></a>
+						<a onclick="document.getElementById('Jul12').scrollIntoView()"><li>July</li></a>
+						<a onclick="document.getElementById('Aug12').scrollIntoView()"><li>August</li></a>
+						<a onclick="document.getElementById('Sep12').scrollIntoView()"><li>September</li></a>
+						<a onclick="document.getElementById('Oct12').scrollIntoView()"><li>October</li></a>
+						<a onclick="document.getElementById('Nov12').scrollIntoView()"><li>November</li></a>
+						<a onclick="document.getElementById('Dec12').scrollIntoView()"><li>December</li></a>
+					</ul>
+					<li class="2013 years" style="font-weight: bold;">2013</li>
+					<ul id="2013months" class="months">
+						<a onclick="document.getElementById('Jan13').scrollIntoView()"><li>January</li></a>
+						<a onclick="document.getElementById('Feb13').scrollIntoView()"><li>February</li></a>
+						<a onclick="document.getElementById('Mar13').scrollIntoView()"><li>March</li></a>
+						<a onclick="document.getElementById('Apr13').scrollIntoView()"><li>April</li></a>
+						<a onclick="document.getElementById('May13').scrollIntoView()"><li>May</li></a>
+						<a onclick="document.getElementById('Jun13').scrollIntoView()"><li>June</li></a>
+						<a onclick="document.getElementById('Jul13').scrollIntoView()"><li>July</li></a>
+						<a onclick="document.getElementById('Aug13').scrollIntoView()"><li>August</li></a>
+						<a onclick="document.getElementById('Sep13').scrollIntoView()"><li>September</li></a>
+						<a onclick="document.getElementById('Oct13').scrollIntoView()"><li>October</li></a>
+						<a onclick="document.getElementById('Nov13').scrollIntoView()"><li>November</li></a>
+						<a onclick="document.getElementById('Dec13').scrollIntoView()"><li>December</li></a>
+					</ul>				
+					<li class="2014 years" style="font-weight: bold;">2014</li>
+					<ul id="2014months" class="months selected_year">
+						<a onclick="document.getElementById('Jan14').scrollIntoView()"><li>January</li></a>
+						<a onclick="document.getElementById('Feb14').scrollIntoView()"><li>February</li></a>
+						<a onclick="document.getElementById('Mar14').scrollIntoView()"><li>March</li></a>
+						<a onclick="document.getElementById('Apr14').scrollIntoView()"><li>April</li></a>
+						<a onclick="document.getElementById('May14').scrollIntoView()"><li>May</li></a>
+						<a onclick="document.getElementById('Jun14').scrollIntoView()"><li>June</li></a>
+						<a onclick="document.getElementById('Jul14').scrollIntoView()"><li>July</li></a>
+						<a onclick="document.getElementById('Aug14').scrollIntoView()"><li>August</li></a>
+						<a onclick="document.getElementById('Sep14').scrollIntoView()"><li>September</li></a>
+						<a onclick="document.getElementById('Oct14').scrollIntoView()"><li>October</li></a>
+						<a onclick="document.getElementById('Nov14').scrollIntoView()"><li>November</li></a>
+						<a onclick="document.getElementById('Dec14').scrollIntoView()"><li>December</li></a>
+					</ul>
+				</ul>
+			</div>
+			<div id="2012content" class="scrollable_content">
+				<h1>2012</h1>
+				<h1 id="Jan12">January</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<h1 id="Feb12">February</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 				<p>Bacon ipsum dolor sit amet pork frankfurter filet mignon flank, capicola meatloaf prosciutto chicken chuck pastrami. Salami chuck jowl ball tip strip steak meatloaf. T-bone boudin jowl pork, ground round prosciutto pork belly meatloaf corned beef porchetta flank jerky. Cow filet mignon flank corned beef. Frankfurter tenderloin kevin jerky bresaola t-bone bacon porchetta shank hamburger landjaeger doner strip steak pancetta turducken. Fatback sausage turducken leberkas short loin filet mignon.
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 				Pastrami tenderloin drumstick, sausage pork loin ham bresaola pork pancetta tri-tip ham hock. Ground round cow hamburger leberkas t-bone. Tri-tip drumstick venison pig chicken beef, shoulder sausage. Pastrami turkey boudin, ribeye brisket turducken filet mignon.
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
+				<h1 id="Mar12">March</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/>
+				<h1 id="Apr12">April</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<h1 id="May12">May</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 				Ribeye swine jowl, ball tip pancetta tri-tip brisket turkey doner. Kielbasa meatball meatloaf hamburger ground round ribeye kevin strip steak doner. Swine kielbasa doner fatback leberkas, bresaola turducken. Short loin kielbasa jerky shoulder venison ham hock short ribs sirloin fatback ball tip ground round pork chop. Landjaeger short ribs ham turducken, drumstick turkey pork tri-tip doner sausage cow ground round corned beef tenderloin frankfurter. Turducken brisket rump hamburger.
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
+				<h1 id="Jun12">June</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/>
+				<h1 id="Jul12">July</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/>
+				<h1 id="Aug12">August</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/>
 				Rump hamburger meatloaf, ham hock chuck jerky tongue porchetta salami short loin prosciutto venison bresaola. Tri-tip pork loin swine, ground round beef ribs hamburger jerky. Ball tip tongue spare ribs, pork loin bacon sirloin frankfurter prosciutto tail short ribs. Bacon brisket landjaeger, leberkas andouille boudin meatball pork venison beef biltong tail ham hock. Tongue fatback capicola drumstick boudin shankle, ball tip swine bacon kevin ground round pork. Ham ground round meatloaf, hamburger leberkas sirloin jowl pancetta bacon pig flank.
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
+				<h1 id="Sep12">September</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/>
+				<h1 id="Oct12">October</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/>
+				<h1 id="Nov12">November</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/>
 				Venison turducken brisket doner drumstick ribeye sausage biltong pastrami ham hamburger. Shank ham hock bresaola spare ribs ground round frankfurter. Swine t-bone sausage capicola ham turducken. Frankfurter pork belly hamburger capicola pig pork chop, jerky chicken filet mignon flank pork venison. Sausage jowl ribeye, shankle filet mignon landjaeger tri-tip cow biltong meatloaf ham hock.
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
+				<h1 id="Dec12">December</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				
+				Does your lorem ipsum text long for something a little meatier? Give our generator a try… it’s tasty!</p>
+			</div>
+			<div id="2013content" class="scrollable_content">
+				<h1>2013</h1>
+				<h1 id="Jan13">January</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<h1 id="Feb13">February</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<p>Bacon ipsum dolor sit amet pork frankfurter filet mignon flank, capicola meatloaf prosciutto chicken chuck pastrami. Salami chuck jowl ball tip strip steak meatloaf. T-bone boudin jowl pork, ground round prosciutto pork belly meatloaf corned beef porchetta flank jerky. Cow filet mignon flank corned beef. Frankfurter tenderloin kevin jerky bresaola t-bone bacon porchetta shank hamburger landjaeger doner strip steak pancetta turducken. Fatback sausage turducken leberkas short loin filet mignon.
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				Pastrami tenderloin drumstick, sausage pork loin ham bresaola pork pancetta tri-tip ham hock. Ground round cow hamburger leberkas t-bone. Tri-tip drumstick venison pig chicken beef, shoulder sausage. Pastrami turkey boudin, ribeye brisket turducken filet mignon.
+				<h1 id="Mar13">March</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/>
+				<h1 id="Apr13">April</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<h1 id="May13">May</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				Ribeye swine jowl, ball tip pancetta tri-tip brisket turkey doner. Kielbasa meatball meatloaf hamburger ground round ribeye kevin strip steak doner. Swine kielbasa doner fatback leberkas, bresaola turducken. Short loin kielbasa jerky shoulder venison ham hock short ribs sirloin fatback ball tip ground round pork chop. Landjaeger short ribs ham turducken, drumstick turkey pork tri-tip doner sausage cow ground round corned beef tenderloin frankfurter. Turducken brisket rump hamburger.
+				<h1 id="Jun13">June</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/>
+				<h1 id="Jul13">July</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/>
+				<h1 id="Aug13">August</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/>
+				Rump hamburger meatloaf, ham hock chuck jerky tongue porchetta salami short loin prosciutto venison bresaola. Tri-tip pork loin swine, ground round beef ribs hamburger jerky. Ball tip tongue spare ribs, pork loin bacon sirloin frankfurter prosciutto tail short ribs. Bacon brisket landjaeger, leberkas andouille boudin meatball pork venison beef biltong tail ham hock. Tongue fatback capicola drumstick boudin shankle, ball tip swine bacon kevin ground round pork. Ham ground round meatloaf, hamburger leberkas sirloin jowl pancetta bacon pig flank.
+				<h1 id="Sep13">September</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/>
+				<h1 id="Oct13">October</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/>
+				<h1 id="Nov13">November</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/>
+				Venison turducken brisket doner drumstick ribeye sausage biltong pastrami ham hamburger. Shank ham hock bresaola spare ribs ground round frankfurter. Swine t-bone sausage capicola ham turducken. Frankfurter pork belly hamburger capicola pig pork chop, jerky chicken filet mignon flank pork venison. Sausage jowl ribeye, shankle filet mignon landjaeger tri-tip cow biltong meatloaf ham hock.
+				<h1 id="Dec13">December</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				
+				Does your lorem ipsum text long for something a little meatier? Give our generator a try… it’s tasty!</p>
+			</div>
+			<div id="2014content" class="scrollable_content selected_year">
+				<h1>2014</h1>
+				<h1 id="Jan14">January</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<h1 id="Feb14">February</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<p>Bacon ipsum dolor sit amet pork frankfurter filet mignon flank, capicola meatloaf prosciutto chicken chuck pastrami. Salami chuck jowl ball tip strip steak meatloaf. T-bone boudin jowl pork, ground round prosciutto pork belly meatloaf corned beef porchetta flank jerky. Cow filet mignon flank corned beef. Frankfurter tenderloin kevin jerky bresaola t-bone bacon porchetta shank hamburger landjaeger doner strip steak pancetta turducken. Fatback sausage turducken leberkas short loin filet mignon.
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				Pastrami tenderloin drumstick, sausage pork loin ham bresaola pork pancetta tri-tip ham hock. Ground round cow hamburger leberkas t-bone. Tri-tip drumstick venison pig chicken beef, shoulder sausage. Pastrami turkey boudin, ribeye brisket turducken filet mignon.
+				<h1 id="Mar14">March</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/>
+				<h1 id="Apr14">April</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<h1 id="May14">May</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				Ribeye swine jowl, ball tip pancetta tri-tip brisket turkey doner. Kielbasa meatball meatloaf hamburger ground round ribeye kevin strip steak doner. Swine kielbasa doner fatback leberkas, bresaola turducken. Short loin kielbasa jerky shoulder venison ham hock short ribs sirloin fatback ball tip ground round pork chop. Landjaeger short ribs ham turducken, drumstick turkey pork tri-tip doner sausage cow ground round corned beef tenderloin frankfurter. Turducken brisket rump hamburger.
+				<h1 id="Jun14">June</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/>
+				<h1 id="Jul14">July</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/>
+				<h1 id="Aug14">August</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/>
+				Rump hamburger meatloaf, ham hock chuck jerky tongue porchetta salami short loin prosciutto venison bresaola. Tri-tip pork loin swine, ground round beef ribs hamburger jerky. Ball tip tongue spare ribs, pork loin bacon sirloin frankfurter prosciutto tail short ribs. Bacon brisket landjaeger, leberkas andouille boudin meatball pork venison beef biltong tail ham hock. Tongue fatback capicola drumstick boudin shankle, ball tip swine bacon kevin ground round pork. Ham ground round meatloaf, hamburger leberkas sirloin jowl pancetta bacon pig flank.
+				<h1 id="Sep14">September</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/>
+				<h1 id="Oct14">October</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/>
+				<h1 id="Nov14">November</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/>
+				Venison turducken brisket doner drumstick ribeye sausage biltong pastrami ham hamburger. Shank ham hock bresaola spare ribs ground round frankfurter. Swine t-bone sausage capicola ham turducken. Frankfurter pork belly hamburger capicola pig pork chop, jerky chicken filet mignon flank pork venison. Sausage jowl ribeye, shankle filet mignon landjaeger tri-tip cow biltong meatloaf ham hock.
+				<h1 id="Dec14">December</h1>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				
 				Does your lorem ipsum text long for something a little meatier? Give our generator a try… it’s tasty!</p>	
 			</div>
 						
@@ -156,12 +314,6 @@
 
 		<div class="content contact_content">
 			<div class="close_content"><h3>X</h3></div>
-			<!-- <div class="nav_wrapper">
-				<div class="about cross_link nav_item"><h1>ABOUT</h1></div>
-				<div class="port cross_link nav_item"><h1>PORTFOLIO</h1></div>
-				<div class="blog cross_link nav_item"><h1>BLOG</h1></div>
-				<div class="nav_item"><h2>CONTACT</h2></div>
-			</div> -->
 			<div class="filler"></div>
 			<p>Bacon ipsum dolor sit amet pork frankfurter filet mignon flank, capicola meatloaf prosciutto chicken chuck pastrami. Salami chuck jowl ball tip strip steak meatloaf. T-bone boudin jowl pork, ground round prosciutto pork belly meatloaf corned beef porchetta flank jerky. Cow filet mignon flank corned beef. Frankfurter tenderloin kevin jerky bresaola t-bone bacon porchetta shank hamburger landjaeger doner strip steak pancetta turducken. Fatback sausage turducken leberkas short loin filet mignon.
 
@@ -174,11 +326,7 @@
 			Venison turducken brisket doner drumstick ribeye sausage biltong pastrami ham hamburger. Shank ham hock bresaola spare ribs ground round frankfurter. Swine t-bone sausage capicola ham turducken. Frankfurter pork belly hamburger capicola pig pork chop, jerky chicken filet mignon flank pork venison. Sausage jowl ribeye, shankle filet mignon landjaeger tri-tip cow biltong meatloaf ham hock.
 
 			Does your lorem ipsum text long for something a little meatier? Give our generator a try… it’s tasty!</p>				
-		</div>
-
-		
-		
+		</div>		
 	</div>
-
 </body>
 </html>
