@@ -140,7 +140,7 @@ html, body{
 /*about link/ring hover effect*/
 .about_link:hover,
 .about_link:focus{	
-	background-image: url(../images/home_about2_o.png);
+	background-image: url(../images/home_about3_o.png);
 }
 .about_link:hover + .about_ring{
 	opacity: 1;	
@@ -203,7 +203,7 @@ html, body{
 	margin-left: 75px;	
 	height:286px;
 	width:286px;
-	background-image: url(../images/home_about2_n.png);
+	background-image: url(../images/home_about3_n.png);
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -336,18 +336,8 @@ h3{
 	position: absolute;
 	right: 5px;
 	top: 0;
-	webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	-ms-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
 }
 
-.close_content:hover{
-	transform:rotate(360deg);
-	-ms-transform:rotate(360deg);
-	-webkit-transform:rotate(360deg);
-}
 
 .filler{
 	height: 75px;
@@ -406,6 +396,11 @@ a:active {
 	/*height: 100%;*/
 	overflow-y: scroll;	
 	font-family: 'Roboto', sans-serif;
+}
+
+#mygallery{
+	width: 80%;
+	margin: 0 auto;
 }
 
 #mygallery a{

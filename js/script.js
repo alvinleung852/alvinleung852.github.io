@@ -3,8 +3,8 @@ $(document).ready(function() {
 	// hide content on load
     $("#mygallery").justifiedGallery({ 
                 randomize : true,
-                margins: 0,
-                rowHeight: 200,
+                margins: 20,
+                rowHeight: 300,
             });
 	$('.content').hide();
     $('.nav_wrapper').hide();
