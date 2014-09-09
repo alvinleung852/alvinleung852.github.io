@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>11th Toronto Group</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+<link rel="stylesheet" href="css/superfish.css" media="screen">
+
+<link rel="stylesheet" href="themes/default/default.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="themes/light/light.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="themes/dark/dark.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="themes/bar/bar.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+
+<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+<script type="text/javascript">
+	$(window).load(function() {
+	$('#slider').nivoSlider();
+	$('.dropdown-toggle').dropdown()
+	});
+</script>
+
+<script src="js/hoverIntent.js"></script>
+<script src="js/superfish.js"></script>
+<script>
+
+	(function($){ //create closure so we can safely use $ as alias for jQuery
+
+		$(document).ready(function(){
+
+			// initialise plugin
+			var example = $('#example').superfish({
+			//add options here if required
+			});
+
+			// buttons to demonstrate Superfish's public methods
+			$('.destroy').on('click', function(){
+				example.superfish('destroy');
+			});
+
+			$('.init').on('click', function(){
+				example.superfish();
+			});
+
+			$('.open').on('click', function(){
+				example.children('li:first').superfish('show');
+			});
+
+			$('.close').on('click', function(){
+				example.children('li:first').superfish('hide');
+			});
+		});
+
+	})(jQuery);
+
+
+</script>
+</head>
+
+<body>
+	<div id="wrapper">
+    	<div id="header">
+        	<div class="logo">
+        		<a href="index.html"><img src="images/logo.png" width="200"/></a>
+            </div>
+            <div class="blue_bar"></div>
+            <ul class="sf-menu" id="example" >
+				<li class="current" style="margin-left:210px;"
+                onmouseover="beaver.src='images/beaver_o.png'" onmouseout="beaver.src='images/beaver_n.png'">
+                	<a><img name="beaver" src="images/beaver_n.png" border="0"/></a>
+					<ul>
+						<li>
+							<a href="followed.html">Upcoming Events</a>
+						</li>
+						<li class="current">
+							<a href="followed.html">About Beaver Scouts ></a>
+							<ul>
+								<li class="current"><a href="followed.html">Our History</a></li>
+								<li><a href="followed.html">Our Beaver Programme</a></li>
+								<li><a href="followed.html">Our Organization</a></li>
+								<li><a href="followed.html">Our Recognition Scheme</a></li>
+								<li><a href="followed.html">Our Meeting</a></li>
+                                <li><a href="followed.html">Our Leadership Team</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="followed.html">2012-13 Calendar</a>
+						</li>
+						<li>
+							<a href="followed.html">Useful Information ></a>
+							<ul>
+								<li><a href="followed.html">Uniform</a></li>
+								<li><a href="followed.html">Camping Equipments</a></li>
+								<li><a href="followed.html">Cancellation</a></li>
+								<li><a href="followed.html">Medication Process</a></li>
+							</ul>
+						</li>
+                        <li>
+							<a href="followed.html">Parent's Role</a>
+						</li>
+                        <li>
+							<a href="followed.html">Photo Gallery</a>
+						</li>
+                        <li>
+							<a href="followed.html">Registration</a>
+						</li>
+                        <li>
+							<a href="followed.html">News Letter</a>
+						</li>
+                        <li>
+							<a href="followed.html">Chinese Version</a>
+						</li>
+					</ul>
+				</li>
+				<li onmouseover="cub.src='images/cub_o.png'" onmouseout="cub.src='images/cub_n.png'">
+					<a><img name="cub" src="images/cub_n.png" border="0"/></a>
+                    <ul>
+						<li>
+							<a href="followed.html">Upcoming Events</a>
+						</li>
+						<li class="current">
+							<a href="followed.html">About Cub Scouts</a>
+						</li>
+						<li>
+							<a href="followed.html">Meeting Information</a>
+						</li>
+                        <li>
+							<a href="followed.html">2012-13 Calendar</a>
+						</li>
+						<li>
+							<a href="followed.html">Useful Information ></a>
+							<ul>
+								<li><a href="followed.html">Uniform</a></li>
+								<li><a href="followed.html">Protocol</a></li>
+								<li><a href="followed.html">Badges</a></li>
+								<li><a href="followed.html">Change of Information</a></li>
+                                <li><a href="followed.html">Communication Channels</a></li>
+                                <li><a href="followed.html">Recruit Training</a></li>
+							</ul>
+						</li>
+                        <li>
+							<a href="followed.html">Photo Gallery</a>
+						</li>
+                        <li>
+							<a href="followed.html">Documents</a>
+						</li>
+                        <li>
+							<a href="followed.html">Contact Us</a>
+						</li>
+					</ul>
+				</li>
+				<li onmouseover="scout.src='images/scout_o.png'" onmouseout="scout.src='images/scout_n.png'">
+					<a><img name="scout" src="images/scout_n.png" border="0"/></a>
+					<ul>
+						<li>
+							<a href="followed.html">Upcoming Events</a>
+						</li>
+						<li class="current">
+							<a href="followed.html">About Scouts ></a>
+                            <ul>
+								<li><a href="followed.html">Our History</a></li>
+								<li><a href="followed.html">Our Troop Structure</a></li>
+								<li><a href="followed.html">Our Leadership Team</a></li>
+							</ul>
+						</li>
+                        <li>
+							<a href="followed.html">2012-13 Calendar</a>
+						</li>
+                        <li>
+							<a href="followed.html">Photo Gallery</a>
+						</li>
+                        <li>
+							<a href="followed.html">Youth Achievements</a>
+						</li>
+                        <li>
+							<a href="followed.html">Contact Us</a>
+						</li>
+					</ul>
+                </li>
+                <li onmouseover="venturer.src='images/venturer_o.png'" onmouseout="venturer.src='images/venturer_n.png'">
+					<a><img name="venturer" src="images/venturer_n.png" border="0"/></a>
+                    <ul>
+						<li>
+							<a href="followed.html">Upcoming Events</a>
+						</li>
+						<li class="current">
+							<a href="followed.html">About Venturer Scouts</a>
+						</li>
+                        <li>
+							<a href="followed.html">2012-13 Calendar</a>
+						</li>
+                        <li>
+							<a href="followed.html">Photo Gallery</a>
+						</li>
+                        <li>
+							<a href="followed.html">Youth Achievements</a>
+						</li>
+                        <li>
+							<a href="followed.html">Contact Us</a>
+						</li>
+					</ul>
+                </li>	
+                <li onmouseover="rover.src='images/rover_o.png'" onmouseout="rover.src='images/rover_n.png'">
+					<a><img name="rover" src="images/rover_n.png" border="0"/></a>
+                    <ul>
+						<li>
+							<a href="followed.html">Upcoming Events</a>
+						</li>
+						<li class="current">
+							<a href="followed.html">About Rover Scouts</a>
+						</li>
+                        <li>
+							<a href="followed.html">2012-13 Calendar</a>
+						</li>
+                        <li>
+							<a href="followed.html">Photo Gallery</a>
+						</li>
+                        <li>
+							<a href="followed.html">Youth Achievements</a>
+						</li>
+                        <li>
+							<a href="followed.html">Contact Us</a>
+						</li>
+					</ul>
+                </li>
+                <li style="margin-left:70px;">
+					<a><img src="images/about.png"/></a>
+                </li>
+                <li>
+					<a><img src="images/contact.png"/></a>
+                </li>
+            </ul>
+			<div class="blue_bar2"></div>
+        </div>
+        <div id="main">
+        
+        	<div class="slider-wrapper theme-default">
+            	<div id="slider" class="nivoSlider" style="height:250px;">
+                	<a href="tempLink.html">
+                		<img src="images/toystory.jpg" data-thumb="images/toystory.jpg" alt="" data-transition="boxRandom"
+                   		title="Come join our family"/>
+                    </a>
+                	<a href="tempLink.html">
+                		<img src="images/up.jpg" data-thumb="images/up.jpg" alt="" data-transition="boxRandom"
+                        title="Our venturers just came back from an adventure"/>
+                    </a>
+                	<a href="tempLink.html">
+                		<img src="images/walle.jpg" data-thumb="images/walle.jpg" alt="" data-transition="boxRandom"  
+                    	title="Doing our part for the environment"/>
+                    </a>
+                	<a href="tempLink.html">
+                		<img src="images/nemo.jpg" data-thumb="images/nemo.jpg" alt="" data-transition="boxRandom"  
+                    	title="Scouters to the rescue"/>
+                    </a>
+            	</div>
+                
+                <!--
+            <div id="htmlcaption" class="nivo-html-caption">
+                <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
+            </div>
+            -->
+            
+        	</div>
+			<div id="main_sidebar">
+                <ul>
+                    <li>About Scouting</li>
+                    <ul style="font-size:12px;">
+                        <li><a href="tempLink.html">What is Scouting?</a></li>
+                        <li><a href="tempLink.html">Scouts Canada</a></li>
+                    </ul>
+                    <li><a href="tempLink.html">Our History</a></li>
+                    <li><a href="tempLink.html">Committee Members</a></li>
+                    <li>Major Events</li>
+                    <ul style="font-size:12px;">
+                        <li><a href="tempLink.html">10th Anniversary Group Camp</a></li>
+                        <li><a href="tempLink.html">Dragon Jamboree Camp</a></li>
+                        <li><a href="tempLink.html">Central Canada Jamboree</a></li>
+                        <li><a href="tempLink.html">15th Anniversary Group Camp</a></li>
+                        <li><a href="tempLink.html">Annual Advancement Ceremony</a></li>
+                    </ul>
+                </ul>           		
+            </div>
+            <div id="main_content">
+            	
+                <img src="images/family.jpg" width="700"/>
+                <h>Welcome to the 11th Toronto Group!</h>
+            </div>
+        </div>
+
+        <div id="footer">
+        	<div id="footer_info">
+            	<div style="padding:40px;">
+            	<b>11th Toronto</b>  <font size="-1" color="#CCCCCC">416-999-9999</font></br>
+                <font size="-1" color="#CCCCCC">info@11th.ca</font></br></br></br>
+                <b>Scouts Canada</b> <font size="-1" color="#CCCCCC">1-888-855-3336</font></br>
+                <font size="-1" color="#CCCCCC">helpcentre@scouts.ca</font></br>
+                <font size="-1" color="#CCCCCC">scouts.ca</font>
+                </div>
+            </div>
+            <div id="footer_socials">
+                <ul>
+                	<li><a href="tempLink.html"><img src="images/Facebook.png" style="height:20px;"/></a></li>
+                    <li><a href="tempLink.html"><img src="images/Twitter.png" style="height:20px;"/></a></li>
+                    <li><a href="tempLink.html"><img src="images/GooglePlus.png" style="height:20px;"/></a></li>
+                    <li><a href="tempLink.html"><img src="images/Youtube.png" style="height:20px;"/></a></li>                    
+                </ul>          
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
