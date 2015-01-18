@@ -267,7 +267,7 @@ html, body{
 }
 /*contact content*/
 .contact_content{
-	background-color:rgba(2, 88, 150, 0.5);
+	background-color:rgba(25, 25, 25, 0.9);
 	/*background-color: #025896;*/
 }
 
@@ -456,5 +456,17 @@ a:active {
 	width: 50%;
 	/*background-color: #123456;*/
 	margin: 0 auto;
-	margin-top: 10%;
+	margin-top: 2%;
+}
+
+#contact_info{
+	width: 30%;
+	float: left;
+	/*background-color: #123465;*/
+}
+
+#contact_form{
+	width: 70%;
+	float: left;
+	/*background-color: #321654;*/
 }
