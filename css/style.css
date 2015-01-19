@@ -442,6 +442,11 @@ a:active {
 	margin-top: 10%;
 }
 
+.about_wrapper a{
+	width: 33%;
+	float:left;
+}
+
 #about_pic{
 	width: 30%;
 	padding: 10px;
@@ -452,21 +457,35 @@ a:active {
 	padding: 10px;
 }
 
-.contact_wrapper{
+.contact_icons{
 	width: 50%;
+	margin: 0 auto;
+	background-color: #456789;
+}
+
+.contact_icons img{
+	width: 50%;
+}
+
+.contact_wrapper{
+	width: 25%;
 	/*background-color: #123456;*/
 	margin: 0 auto;
-	margin-top: 2%;
+	margin-top: 10%;
 }
 
-#contact_info{
-	width: 30%;
+/*.contact_wrapper img{
+	width: 15%;
+	padding: 20px;
 	float: left;
-	/*background-color: #123465;*/
+}*/
+
+.contact_wrapper table{
+	/*background-color: #123456;*/
+	width: 100%;
 }
 
-#contact_form{
-	width: 70%;
-	float: left;
-	/*background-color: #321654;*/
+.contact_wrapper img{
+	width: 60%;
+	margin-top: 50px;
 }
