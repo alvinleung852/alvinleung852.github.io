@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.titleBar{
+	background-color: #00A599;
+    width: 50%;
+    height: 20px;
+    border-radius: 0px 5px 5px 0px;
+    margin-top:75px;
+}
+
+.titleText{
+	margin-top: -95px;
+	margin-left: 20px;
+}
+
+.header h1{
+	font-family: 'Nunito', sans-serif;
+	font-weight: normal;
+	color: #343434;
+}
+.body{
+	padding-top: 50px;
+	width: 100%;
+}
+
+.infoWrapper{
+	background-color: #00A599;
+	/*width: 100%;*/
+}
+
+.infoBar{
+	/*background-color: #123456;*/
+	width: 70%;
+	margin: 0 auto;
+}
+
+#guidebookIcon{
+	margin-top: 50px;
+	margin-bottom: -50px;
+}
+
+.infoWrapper h2{
+	font-family: 'Nunito', sans-serif;
+	color: #FFFFFF;
+	font-weight: 600;
+	font-size: 3em;
+	padding: 0;
+	margin:0;
+}
+
+.infoWrapper p{
+	font-family: 'Nunito', sans-serif;
+	font-weight: 100;
+	font-size: 1.3em;
+	color: #FFFFFF;
+	padding: 0;
+	margin:0;
+}
+
+.footer{
+	width: 15%;
+	margin: 0 auto;
+}
+
+.positions{
+	padding-top: 100px;
+	width: 70%;
+	/*background-color: #954123;*/
+	margin: 0 auto;
+}
+
+.positions img{
+	width:100%;
+}
+
+.positions table{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.positions td{
+	text-align: center;
+}

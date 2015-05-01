@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style-io.css"/>
+	<link rel="stylesheet" type="text/css" href="../sub-style.css"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="../jquery-guidebook.js"></script>
+	<script src="io_script.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
+	<title>Information Officer</title>
+</head>
+
+<body>
+	<a href="#mainContent" class="skip">Skip to content</a>
+	<div class="menuButton"><img src="../images/menu_icon.png" alt=""></div>
+	<!-- <div class="wrapper"> -->
+		<div class="header">
+			<div class="col title">
+				<h1>
+					<span class="ENG">Information Officer</span>
+					<span class="FRE">Guide du préposé à l'information</span>
+				</h1>
+				<div class="titleBar" id="training"></div>
+			</div>
+			<div class="col navigation">
+				<div class="navigationLang">
+					<a href="#" onclick="changeLang(0)">English</a>
+					 | 
+					<a href="#" onclick="changeLang(1)">Français</a>
+				</div>
+				<ul class="navigationIcons">
+					<li>
+						<a href="../index.html"><img src="../nav/home_n.png" alt="Navigate to home screen" 
+							onblur="this.src='../nav/home_n.png';"
+							onfocus="this.src='../nav/home_o.png';" 
+							onmouseover="this.src='../nav/home_o.png';" 
+							onmouseout="this.src='../nav/home_n.png';"></a>
+					</li>
+					<li>
+						<a href="#"><img src="../nav/ro_n.png" alt="Navigate to Returning Officer" 
+							onblur="this.src='../nav/ro_n.png';"
+							onfocus="this.src='../nav/ro_o.png';" 
+							onmouseover="this.src='../nav/ro_o.png';" 
+							onmouseout="this.src='../nav/ro_n.png';"></a>
+					</li>
+					<li>
+						<a href="#"><img src="../nav/cps_n.png" alt="Navigate to Central Poll Supervisor" 
+							onblur="this.src='../nav/cps_n.png';"
+							onfocus="this.src='../nav/cps_o.png';" 
+							onmouseover="this.src='../nav/cps_o.png';" 
+							onmouseout="this.src='../nav/cps_n.png';"></a>
+					</li>
+					<li>
+						<a href="#"><img src="../nav/dro_n.png" alt="Navigate to Deputy Returning Officer" 
+							onblur="this.src='../nav/dro_n.png';"
+							onfocus="this.src='../nav/dro_o.png';" 
+							onmouseover="this.src='../nav/dro_o.png';" 
+							onmouseout="this.src='../nav/dro_n.png';"></a>
+					</li>
+					<li>
+						<a href="#"><img src="../nav/pc_n.png" alt="Navigate to Poll Clerk" 
+							onblur="this.src='../nav/pc_n.png';"
+							onfocus="this.src='../nav/pc_o.png';" 
+							onmouseover="this.src='../nav/pc_o.png';" 
+							onmouseout="this.src='../nav/pc_n.png';"></a>
+					</li>
+					<li>
+						<a href="#"><img src="../nav/rego_n.png" alt="Navigate to Registration Officer" 
+							onblur="this.src='../nav/rego_n.png';"
+							onfocus="this.src='../nav/rego_o.png';" 
+							onmouseover="this.src='../nav/rego_o.png';" 
+							onmouseout="this.src='../nav/rego_n.png';"></a>
+					</li>
+					<li>
+						<a href="#"><img src="../nav/io_n.png" alt="Navigate to Information Officer" 
+							onblur="this.src='../nav/io_n.png';"
+							onfocus="this.src='../nav/io_o.png';" 
+							onmouseover="this.src='../nav/io_o.png';" 
+							onmouseout="this.src='../nav/io_n.png';"></a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+		<div class="body" id="mainContent">
+			<div class="col sideBar">
+				<div class="designBar"></div>
+				<ul style="list-style-type:circle">
+					<li><a href="#" onclick="$('#title1').scrollView();"><div class="topic1 sideBarHighlight">
+						<span class="ENG">List of supplies</span>
+						<span class="FRE">Liste de matériel</span>
+					</div></a></li>
+					<li><a href="#" onclick="$('#title2').scrollView();"><div class="topic2">
+						<span class="ENG">Get ready the night before</span>
+						<span class="FRE">Préparez-vous la veille</span>
+					</div></a></li>
+					<li><a href="#" onclick="$('#title3').scrollView();"><div class="topic3">
+						<span class="ENG">Set up your station</span>
+						<span class="FRE">Installez votre poste de travail</span>
+					</div></a></li>
+					<li><a href="#" onclick="$('#title4').scrollView();"><div class="topic4">
+						<span class="ENG">Organize supplies on your table</span>
+						<span class="FRE">Placez le matériel sur votre table</span>
+					</div></a></li>
+					<li><a href="#" onclick="$('#title5').scrollView();"><div class="topic5">
+						<span class="ENG">Serve electors</span>
+						<span class="FRE">Servez les électeurs</span>
+					</div></a></li>
+					<li><a href="#" onclick="$('#title6').scrollView();"><div class="topic6">
+						<span class="ENG">Candidates and their representatives</span>
+						<span class="FRE">Candidats et leurs représentants</span>
+					</div></a></li>
+					<li><a href="#" onclick="$('#title7').scrollView();"><div class="topic7">
+						<span class="ENG">Elector eligibility and identification</span>
+						<span class="FRE">Admissibilité et identification de l'électeur</span>
+					</div></a></li>
+					<li><a href="#" onclick="$('#title8').scrollView();"><div class="topic8">
+						<span class="ENG">Close your station</span>
+						<span class="FRE">Fermez votre poste de travail</span>
+					</div></a></li>
+					<li><a href="#" onclick="$('#title9').scrollView();"><div class="topic9">
+						<span class="ENG">Find elector's polling station on List of Electors</span>
+						<span class="FRE">Trouvez le bureau de vote d'un électeur sur la Liste électorale</span>
+					</div></a></li>
+					<li><a href="#" onclick="$('#title10').scrollView();"><div class="topic10">
+						<span class="ENG">Find elector's polling station on Poll Key</span>
+						<span class="FRE">Trouvez le bureau de vote d'un électeur dans l'Indicateur des sections de vote</span>
+					</div></a></li>
+					<li><a href="#" onclick="$('#title11').scrollView();"><div class="topic11">
+						<span class="ENG">Other situations</span>
+						<span class="FRE">Autres situations</span>
+					</div></a></li>
+					<li><a href="#" onclick="$('#title12').scrollView();"><div class="topic12">
+						<span class="ENG">Other information</span>
+						<span class="FRE">Autres renseignements</span>
+					</div></a></li>
+					<li><a href="#" onclick="$('#title13').scrollView();"><div class="topic13">
+						<span class="ENG">Offences and suspicious activities</span>
+						<span class="FRE">Infractions et activités suspectes</span>
+					</div></a></li>
+					<!-- <li><span id="topscroll"></span></li> -->
+				</ul>
+			</div>
+			<div class="col" id="mainBar">
+				<div class="content" id="content1">
+					<div id="title1">
+						<div class="designBar"></div>
+						<h2>
+							<span class="ENG">List of supplies</span>
+							<span class="FRE">Liste de matériel</span>
+						</h2>
+					</div>
+					<!-- 
+					<span class="ENG"></span>
+					<span class="FRE"></span> 
+					-->
+					<!-- <div><span style="background-color:#BE0E85">||||||</span></div>
+					<div><span style="background-color:#007600">||||||</span></div>
+					<div><span style="background-color:#CC4C00">||||||</span></div>
+					<div><span style="background-color:#00766F">||||||</span></div> -->
+					<span class="ENG">
+						<ul>
+							<li>
+								Alphabetical List of Electors by Site<br>
+								<span class="subInfo">inside Large All-Purpose Envelope</span> EC 11520
+							</li>
+							<li>
+								Poll Key (if no Registration Officer)<br>
+								<span class="subInfo">inside Large All-Purpose Envelope</span> EC 11520
+							</li>
+							<li>
+								File folders with candidates' names
+								<span class="subInfo">(only on election day)</span>
+							</li>
+							<li>
+								EC 10130 Appointment and Oath<br>
+								<span class="subInfo">keep it with you at all times</span>
+							</li>
+							<li>
+								EC 50255 VIC Collection Box
+							</li>
+							<li>
+								EC 50471 Supplies Kit for Information Officer that includes
+								<ul>
+									<li>Black Pen</li>
+									<li>EC 50145 Bilingual Welcome Card - 
+										<span class="subInfo">pack of 5</span>
+									</li>
+									<li>EC 50210 Election Personnel Identification Card</li>
+									<li>EC 50291 Paper Ruler</li>
+								</ul>
+							</li>
+							<li>
+								EC 90189 Have Your ID Ready - 
+								<span class="subInfo">1 pad</span>
+							</li>
+						</ul>
+						<div class="note">
+							the office decides what day you will recieve your supplies.
+						</div>
+					</span>
+					<span class="FRE">
+						<ul>
+							<li>
+								Liste électorale alphabétique par lieu de scrutin<br>
+								<span class="subInfo">dans Grande enveloppe tout usage</span> EC 11520
+							</li>
+							<li>
+								Indicateur des sections de vote (s'il n'y a pas d'agent d'inscription)<br>
+								<span class="subInfo">dans Grande enveloppe tout usage</span> EC 11520
+							</li>
+							<li>
+								Chemises portant les noms des candidats
+								<span class="subInfo">(seulement le jour de l'élection) </span>
+							</li>
+							<li>
+								EC 10130 Nomination et serment <br>
+								<span class="subInfo">gardez-le avec vous en tout temps</span>
+							</li>
+							<li>
+								EC 50255 Boîte pour la cueillette des CIÉ
+							</li>
+							<li>
+								EC 50471 Trousse de fournitures pour préposé à l'information qui contient
+								<ul>
+									<li>stylo noir</li>
+									<li>EC 50145 Carte de bienvenue bilingue  - 
+										<span class="subInfo">paquet de 5 </span>
+									</li>
+									<li>EC 50210 Carte d'identité pour le personnel électoral</li>
+									<li>EC 50291 Règle de papier</li>
+								</ul>
+							</li>
+							<li>
+								Préparez vos pièces d'identité - 
+								<span class="subInfo">1 bloc</span>
+							</li>
+						</ul>	
+						<div class="note">
+							le moment où vous recevrez votre matériel est déterminé par le bureau.
+						</div>					
+					</span>		
+				</div>
+				<div class="content"  id="content2">
+					<div id="title2">
+						<div class="designBar"></div>
+						<h2>
+							<span class="ENG">Get ready the night before</span>
+							<span class="FRE">Préparez-vous la veille</span>
+						</h2>
+					</div>
+					<span class="ENG">
+						<ol>
+							<li>
+								Check your supplies
+								<div class="note">you might get your supplies from the CPS (or designated DRO, if no CPS was appointed to your polling place) when you arrive at the polling place.</div>
+							</li>						
+							<li>
+								If anything is missing or if you will not be able to work, tell the CPS when they call
+							</li>
+							<li>
+								When CPS calls, confirm that you will report to work and that you know where your polling place is located
+							</li>
+							<li>
+								Review<span class="subInfo">Have Your ID Ready</span> EC 90189
+							</li>
+							<li>
+								Prepare any food, water and medication you will need
+							</li>
+						</ol>
+					</span>
+					<span class="FRE">
+						<ol>
+							<li>
+								Vérifiez votre matériel
+								<div class="note">il se peut que vous receviez votre matériel du SCS (ou du scrutateur désigné, si votre lieu de vote n'a pas de SCS) à votre arrivée au lieu de vote.</div>
+							</li>						
+							<li>
+								S'il manque quelque chose ou si vous prévoyez être incapable de travailler, dites-le au SCS quand il vous appelle
+							</li>
+							<li>
+								Quand le SCS appelle, confirmez que vous vous présenterez au travail et que vous savez où est situé votre lieu de vote
+							</li>
+							<li>
+								Relisez<span class="subInfo">Préparez vos pièces d'identité</span> EC 90189
+							</li>
+							<li>
+								Préparez la nourriture, l'eau et tout médicament dont vous aurez besoin
+							</li>
+						</ol>
+					</span>
+				</div>
+				<div class="content">
+					<div id="title3">
+						<div class="designBar"></div>
+						<h2>
+							<span class="ENG">Set up your station</span>
+							<span class="FRE">Installez votre poste de travail</span>
+						</h2>
+					</div>
+					<span class="ENG">
+						<ol>
+							<li>
+								Arrive at polling place at time written at the front of this guidebook
+							</li>
+							<li>
+								Report to CPS and get supplies if needed
+								<div class="note">during set up candidates' representatives may arrive. Greet and send them to CPS.</div>
+							</li>						
+							<li>
+								If your table hasn't already been set up at entrance to face electors as they arrive, set it up yourself.<br><br>Make sure there is enough space for people with reduced mobility
+							</li>
+							<li>
+								Check your list of supplies and tell CPS if anything is missing
+							</li>
+							<li>
+								Write your name and 'Information Officer' on <span class="subInfo">Election Personnel Identification Card</span> EC 50210 and put it on. Wear it at all times.
+							</li>
+							<li>
+								Assemble <span class="subInfo">VIC Collection Box </span> EC 50255 and put it on your table
+							</li>
+							<li>
+								Organize supplies on your table - p.5
+							</li>
+							<li>
+								Find where polling stations, washrooms, public telephones, and emergency exits are located
+							</li>
+							<li>
+								Find the designated accessible entrance and check that the automatic door opener works
+								<div class="note">
+									if there is no automatic door opener or it doesn't work, the CPS will give one of you the task of opening the door for people who may have difficulty getting in.
+								</div>
+							</li>						
+							<li>
+								Do any other tasks CPS assigns
+							</li>
+							<li>
+								If it is election day, complete tasks on p.9
+							</li>
+							<li>
+								Review <span class="subInfo">Have Your ID Ready</span> EC 90189
+							</li>
+							<li>
+								At start of voting hours written at the front of this guidebook, serve electors - p.6
+							</li>
+						</ol>
+					</span>
+					<span class="FRE">
+						<ol>
+							<li>
+								Arrivez au lieu de vote à l'heure inscrite au début de ce guide
+							</li>
+							<li>
+								Présentez-vous au SCS et obtenez tout matériel dont vous avez besoin
+								<div class="note">pendant l'installation, il se peut que des représentants des candidats arrivent. Accueillez-les et dirigez-les vers le SCS.</div>
+							</li>						
+							<li>
+								Si votre table n'a pas déjà été installée à l'entrée de manière à faire face aux électeurs quand ils arrivent, installez-la vous-même
+								<br><br>
+								Assurez-vous qu'il y a assez d'espace pour les personnes à mobilité réduite
+							</li>
+							<li>
+								Vérifiez votre liste de matériel et adressez-vous au SCS s'il manque quelque chose
+							</li>
+							<li>
+								Inscrivez votre nom et « Préposé à l'information » sur la <span class="subInfo">Carte d'identité du personnel électoral</span> EC 50210 et mettez-la sur vous. Portez-la en tout temps.
+							</li>
+							<li>
+								Assemblez la <span class="subInfo">Boîte pour la cueillette des CIÉ </span> EC 50255 et placez-la sur votre table
+							</li>
+							<li>
+								Placez le matériel sur votre table - p. 5
+							</li>
+							<li>
+								Assurez-vous de savoir où se trouvent les bureaux de vote, les toilettes, les téléphones publics et les sorties de secours
+							</li>
+							<li>
+								Trouvez l'entrée désignée comme accessible et assurez-vous du bon fonctionnement de la porte automatique
+								<div class="note">
+									s'il n'y a pas de porte automatique ou si elle ne fonctionne pas, le SCS confiera à l'un de vous la tâche d'ouvrir la porte pour les électeurs qui peuvent avoir de la difficulté à entrer.
+								</div>
+							</li>						
+							<li>
+								Faites toute autre tâche que le SCS vous confie
+							</li>
+							<li>
+								Si c'est le jour de l'élection, faites les tâches à la - p. 9
+							</li>
+							<li>
+								Relisez <span class="subInfo">Préparez vos pièces d'identité</span> EC 90189
+							</li>
+							<li>
+								Au début des heures de vote indiquées au début de ce guide, servez les électeurs - p. 6
+							</li>
+						</ol>
+					</span>
+				</div>	
+				<div class="content">
+					<div id="title4">
+						<div class="designBar"></div>
+						<h2>							
+							<span class="ENG">Organize supplies on your table</span>
+							<span class="FRE">Placez le matériel sur votre table</span>
+						</h2>
+					</div>
+					<img src="io_images/content4.jpg" alt="Images of supplies that should be on your table" longdesc="longdesc_organize.html">
+				</div>		
+				<div class="content" id="content5">
+					<div id="title5">
+						<div class="designBar"></div>
+						<h2>
+							<span class="ENG">Serve electors</span>
+							<span class="FRE">Servez les électeurs</span> 
+						</h2>
+					</div>
+					<span class="ENG"><img src="io_images/FlowChart.jpg" alt="Flowchart: How to properly serve an elector"></span>
+					<span class="FRE"><img src="io_images/FlowChart_FR.jpg" alt="Flowchart: How to properly serve an elector"></span> 						
+					<div class="desc">
+						Description of the flowchart
+						<ul>
+							<li>Greet the elector by saying "hello, bonjour"</li>
+							<li>Ask if they have ID that shows their name and address
+								<ul>
+									<li>If they brought ID with them, ask them if they brought their VIC
+										<ul>
+											<li>If they did, look up their polling station on the back of the card and send them to their polling station</li>
+											<li>If they did not, find their polling station on the List of Electors. Is their name and address on the list?
+												<ul>
+													<li>If they are on the List of Electors, are there any errors or is their name crossed off?
+														<ul>
+															<li>If there are errors or send them to the Registration Officer</li>
+															<li>If there are no errors, send them to their polling station</li>
+														</ul>
+													</li>														
+													<li>If they are not on List of Electors, send them to the Registration Officer</li>
+												</ul>
+											</li>											
+										</ul>
+									</li>
+									<li>If they did not bring ID with them, is there an elector who knows them and can attest to their address?
+										<ul>
+											<li>If there is someone to attest for them, send them to the Registration Officer</li>
+											<li>If there is no one with them, give them Have Your ID Ready EC 90189 and ask them to come back with acceptable ID.</li>
+										</ul>
+									</li>
+								</ul>
+							</li>							
+						</ul>
+					</div>					
+					<div class="note">
+						<span class="ENG">
+							if there is no Registration Officer or they are busy, you can find the elector's polling station on the <span class="subInfo">Poll Key</span>
+						</span>
+						<span class="FRE">
+							s'il n'y a pas d'agent d'inscription ou s'ils sont occupés, vous pouvez trouver le burearu de vote d'un électeur dans l<span class="subInfo">'Indicateur des sections de vote.</span>
+						</span>
+					</div>
+					<div class="subContent5">
+						<span class="ENG">
+							<h3>Keep List of Electors covered when you are not using it</h3>
+						</span>
+						<span class="FRE">
+							<h3>Gardez la Liste électorale à l'abri des regards quand vous ne vous en servez pas</h3>
+						</span>
+					</div>
+					<div class="subContent5">
+						<span class="ENG">
+							<h3>VICs</h3>
+							<ul>
+								<li>Collect them after electors vote</li>
+								<li>Put them in the collection box, not the trash</li>
+								<li>Check around polling place regularly to collect cards left by electors</li>
+								<li><a href="#" onclick="$('#title12').scrollView();">Electors wants to keep their VIC *</a></li>
+							</ul>
+						</span>
+						<span class="FRE">
+							<h3>CIÉ</h3>
+							<ul>
+								<li>Recueillez-les après que les électeurs ont voté</li>
+								<li>Mettez-les dans la boîte de cueillette, pas dans la poubelle</li>
+								<li>Faites régulièrement le tour du lieu de vote pour ramasser les CIÉ laissées par des électeurs</li>
+								<li><a href="#" onclick="$('#title12').scrollView();">Électeur veut garder sa CIÉ *</a></li>
+							</ul>
+						</span>
+					</div>
+					<div class="subContent5">
+						<span class="ENG">
+							<h3>Send to CPS</h3>
+							<ul>
+								<li>Complaints or problems</li>
+								<li>Difficult candidates' representatives</li>
+								<li>Elector wants to be removed from the List of Electors permanently</li>
+								<li>Elector has or needs a language or sign-language interpreter</li>
+							</ul>
+						</span>
+						<span class="FRE">
+							<h3>Dirigez vers le SCS</h3>
+							<ul>
+								<li>Les plaintes ou les problèmes</li>
+								<li>Les représentants de candidat difficiles</li>
+								<li>Tout électeur qui veut être rayé de la Liste électorale de façon permanente</li>
+								<li>Tout électeur qui a ou a besoin d'un interprète, ou d'un interprète gestuel</li>
+							</ul>
+						</span>
+					</div>
+					<div class="subContent5">
+						<span class="ENG">
+							<h3>Traffic</h3>
+							<ul>
+								<li>Only let a few electors inside at a time</li>
+								<li>Ask electors waiting to vote to move away from voting screens</li>
+								<li>Politely ask electors who have already voted to leave</li>
+							</ul>
+						</span>
+						<span class="FRE">
+							<h3>Circulation</h3>
+							<ul>
+								<li>Ne laissez entrer que quelques électeurs à la fois</li>
+								<li>Demandez aux électeurs qui attendent pour voter de se tenir loin des isoloirs</li>
+								<li>Demandez poliment aux électeurs qui ont déjà voté de quitter</li>
+							</ul>
+						</span>
+					</div>
+					<div class="subContent5">
+						<a href="#" onclick="$('#title6').scrollView();">
+						<span class="ENG">
+							<h3>When candidate's representative asks for bingo sheets *</h3>
+						</span>
+						<span class="FRE">
+							<h3>Quand un représentant d'un candidat demande les cartes de bingo *</h3>
+						</span>		
+						</a>				
+					</div>
+					<div class="subContent5">
+						<span class="ENG">
+							<a href="#" onclick="$('#title11').scrollView();"><h3>Other situations *</h3></a>
+							<ul>
+								<li>Elector has Transfer Certificate</li>
+								<li>Elector wants to be served in French</li>
+								<li>Elector with a disability needs help</li>
+								<li>Elector's VIC contains errors</li>
+							</ul>
+						</span>
+						<span class="FRE">
+							<a href="#" onclick="$('#title11').scrollView();"><h3>Autres situations *</h3></a>
+							<ul>
+								<li>Électeur a un Certificat de transfert</li>
+								<li>Électeur veut être servi en anglais</li>
+								<li>Électeur a une déficience et a besoin d'aide</li>
+								<li>Électeur dont la CIÉ contient des erreurs</li>
+							</ul>
+						</span>						
+					</div>
+					<div class="subContent5">
+						<span class="ENG">
+							<a href="#" onclick="$('#title12').scrollView();"><h3>Other information *</h3></a>
+							<ul>
+								<li>Cell phones inside polling place</li>
+								<li>Media representatives and photographers</li>
+								<li>Offences and suspicious activities</li>
+							</ul>
+						</span>
+						<span class="FRE">
+							<a href="#" onclick="$('#title12').scrollView();"><h3>Autres renseignements *</h3></a>
+							<ul>
+								<li>Téléphones cellulaires dans le lieu de vote</li>
+								<li>Représentants des médias et photographes</li>
+								<li>Infractions et activités suspectes</li>
+							</ul>
+						</span>
+					</div>
+				</div>	
+				<div class="content" id="content6">
+					<div id="title6">
+						<div class="designBar"></div>
+						<h2>
+							<span class="ENG">Candidates and their representatives</span>
+							<span class="FRE">Candidats et leurs représentants</span>
+						</h2>
+					</div>
+					<span class="ENG">
+						<p>Greet them and send them to the CPs or designated DRO. Their main point of contact at your polling place is the CPS or designated DRO, who can ask them to leave or have removed if they don't follow <span class="subInfo">Guidelines for Candidates' Representatives</span> EC 20045</p>
+						<span class="highlight">They may</span>
+						<ul>
+							<li>be under 18 years of age</li>
+							<li>be a non-Canadian citizen</li>
+							<li>observe activties at your polling place</li>
+							<li>collect the <span class="subInfo">Statement of the Electors Who Voted on Polling Day</span> EC 50111 (bingo sheet) throughout election day</li>
+							<li>at the close of advance polls every night, request a photocopy of each <span class="subInfo">Statement of the Electors who Voted at the Advance Poll</span> EC 50109 (bingo sheet)</li>
+						</ul>
+						<span class="highlight">They may not</span>
+						<ul>
+							<li>interfere withthe voting process</li>
+							<li>disobey CPS or DRO directions or decisions</li>
+							<li>bring in any documents, folders, clothes or items that show the name, emblem or colour of a political party or candidate (CPS or designated DRO decides what is acceptable)</li>
+						</ul>
+						<h3>Set up for candidates' representatives</h3>
+						<p>Do these steps on election day only.</p>
+						<ol>
+							<li>Set up a table near the entrance for candidates' representatives</li>
+							<li>Lay out file folders with candidate names on the table</li>
+							<li>Every 60 minutes, collect <span class="subInfo">Statement of the Electors Who Voted on Polling Day</span> EC 50111 (bingo sheet) from each Poll Clerk
+								<ul>
+									<li>2 sets of forms if there are 4 to 7 candidates</li>
+									<li>3 sets if there are 8 to 11 candidates</li>
+								</ul>
+							</li>						
+							<li>Put a copy of each form you collect in every folder</li>
+						</ol>
+						<h3>When representatives asks for bingo sheets</h3>
+						<ol>
+							<li>Ask to see their <span class="subInfo">Authorization of a Candidate's Representative</span> EC 20020 <br> It should be folded inside <span class="subInfo">Plastic Badge Holder</span> EC 20909 behind a <span class="subInfo">Candidate's Representative Badge</span> EC 20901
+								<div class="note">candidates do not need an authorization form or badge.</div>
+							</li>
+							
+							<li>Check that the Election Officer Section is signed and dated by a CPS or DRO</li>
+							<li>If it is not, or they don't have a form, send them to CPS<br>At advance polls, send them directly to CPS</li>
+							<li>Do the following steps on election day only
+								<ul>
+									<li>Give them the bingo sheets from the folder for their candidate</li>
+									<li>Put the empty folder back on the table</li>
+								</ul>
+							</li>						
+						</ol>
+					</span>
+					<span class="FRE">
+						<p>Accueillez-les et dirigez-les vers le SCS ou le scrutateur désigné. Le SCS ou le scrutateur désigné est leur principale personne-ressource à votre lieu de vote et peut leur demander de quitter les lieux ou les faire expulser s'ils ne se conforment pas aux <span class="subInfo">Lignes directrices pour les représentants des candidats</span> EC 20045.</p>
+						<span class="highlight">Ils peuvent</span>
+						<ul>
+							<li>être âgé de moins de 18 ans</li>
+							<li>ne pas être citoyen canadien</li>
+							<li>observer les activités à votre lieu de vote</li>
+							<li>recueillir, tout au long du jour de l'élection, les <span class="subInfo">Relevés des électeurs qui ont voté le jour du scrutin</span> EC 50111 (cartes de bingo)</li>
+							<li>à la fermeture des bureaux de vote à chaque soir du vote par anticipation, demander une photocopie de chaque <span class="subInfo">Relevé des électeurs qui ont voté par anticipation</span> EC 50109 (carte de bingo)</li>
+						</ul>
+						<span class="highlight">Ils ne peuvent pas</span>
+						<ul>
+							<li>s'ingérer dans le processus de vote</li>
+							<li>désobéir aux directives ou aux décisions du SCS ou du scrutateur</li>
+							<li>apporter sur place tout document, dossier, vêtement ou autre élément montrant le nom, l'emblème ou la couleur d'un parti politique ou d'un candidat (le SCS ou le scrutateur désigné décide ce qui est acceptable)</li>
+						</ul>
+						<h3>Installation pour les représentants des candidats</h3>
+						<p>Faites ces tâches seulement le jour de l'élection.</p>
+						<ol>
+							<li>Installez une table près de l'entrée pour les représentants des candidats</li>
+							<li>Placez sur la table les chemises portant les noms des candidats</li>
+							<li>À toutes les 60 minutes, recueillez le <span class="subInfo">Relevé des électeurs qui ont voté le jour du scrutin</span> EC 50111 (carte de bingo) de chaque greffier du scrutin
+								<ul>
+									<li>2 ensembles de formulaires s'il y a de 4 à 7 candidats</li>
+									<li>3 ensembles s'il y a de 8 à 11 candidats</li>
+								</ul>
+							</li>						
+							<li>Mettez dans chaque chemise une copie de chaque formulaire que vous recueillez</li>
+						</ol>
+						<h3>Quand un représentant demande les cartes de bingo</h3>
+						<ol>
+							<li>
+								Demandez à voir son <span class="subInfo">Autorisation du représentant d'un candidat</span> EC 20020 
+								<br>
+								Elle devrait être pliée à l'intérieur d'un <span class="subInfo">Porte-insigne en plastique </span> EC 20909 derrière un <span class="subInfo">Insigne d'identité du représentant du candidat</span> EC 20901
+								<div class="note">les candidats n'ont pas besoin d'un formulaire d'autorisation ou d'un insigne.</div>
+							</li>							
+							<li>Assurez-vous que la Section réservée au fonctionnaire électoral est signée et datée par un SCS ou un scrutateur</li>
+							<li>
+								Si cette section n'est pas signée et datée ou si le représentant n'a pas de formulaire, dirigez-le vers le SCS
+								<br>
+								Aux bureaux de vote par anticipation, dirigez-le directement vers le SCS
+							</li>
+							<li>Faites les tâches suivantes seulement le jour de l'élection
+								<ul>
+									<li>Donnez-lui les cartes de bingo de la chemise pour son candidat</li>
+									<li>Replacez la chemise vide sur la table</li>
+								</ul>
+							</li>						
+						</ol>
+					</span>
+				</div>
+				<div class="content">
+					<div id="title7">
+						<div class="designBar"></div>
+						<h2>
+							<span class="ENG">
+								Elector eligibility and identification
+							</span>
+							<span class="FRE">
+								Admissibilité et identification de l'électeur
+							</span>
+						</h2>
+					</div>
+					<span class="ENG">
+						<p>To vote at your polling place, an elector must be</p>
+						<ul>
+							<li>at least 18 years old on election day</li>
+							<li>a Canadian citizen</li>
+							<li>on the <span class="subInfo">List of Electors</span> or have a <span class="subInfo">Register</span> or <span class="subInfo">Transfer Certificate</span></li>
+							<li>living at an address assigned to a polling station at your polling place</li>
+						</ul>
+						<h3>Elector identification options</h3>
+						<p>Documents must be in English or French (or Inuktitut in Nunavut) and in their original format. E-statement and e-invoice printouts are accepted and can also be shown on a mobile device.</p>
+						<p>Expired documents are accepted if they show the elector's name and current address. Documents to which the name or address have been added by hand are not accepted, unless they have been added by the issuer of the document.</p>
+						<p>Refer to <span class="subInfo">Have Your ID Ready</span> EC 90189 when you're not sure</p>
+						<table>
+							<col style="vertical-align: top; width:10%;">
+							<col style="width:90%;">
+							
+							<tr>
+								<th style="color: #8f23b3; vertical-align: top;">Option 1</th>
+								<td>Show driver's licence, provincial/terrirtorial ID card or any other government card with their photo, name and current address</td>
+							</tr>
+							<tr>
+								<th style="color: #8f23b3; vertical-align: top;">Option 2</th>
+								<td>Show 2 different pieces of ID from the list both with their name and at least one with their current address <br><span class="subInfo">They have to be different (2 bank statements for the same account are not accepted)</span></td>
+							</tr>
+							<tr>
+								<th style="color: #8f23b3; vertical-align: top;">Option 3</th>
+								<td>
+									Show 2 different pieces of ID from the list with their name and have another elector attest to their address. Both electors have to sign the <span class="subInfo">Oath of Residence Certificate</span><br> The attestor must
+									<ul>
+										<li>know the elector and where they live</li>
+										<li>live in the same polling division</li>
+										<li>be on the <span class="subInfo">List of Electors</span> or have a <span class="subInfo">Registration Certificate</span></li>
+										<li>show proof of identity and address</li>
+										<li>have not attested to another elector's address</li>
+										<li>have not had their own address attested to</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<div class="note">in some areas, ID may not show a residential address (e.g. PO box). If the address on their ID matches their address on the <span class="subInfo">List of Electors</span>, the document is accepted.</div>
+					</span>
+					<span class="FRE">
+						<p>Pour voter à votre lieu de vote, l'électeur doit</p>
+						<ul>
+							<li>avoir au moins 18 ans le jour de l'élection</li>
+							<li>être citoyen canadien</li>
+							<li>être inscrit sur la <span class="subInfo">Liste électorale </span> ou avoir un <span class="subInfo">Certificat d'inscription</span> ou <span class="subInfo">de transfert</span></li>
+							<li>habiter à une adresse assignée à un bureau de vote à votre lieu de vote</li>
+						</ul>
+						<h3>Options d'identification de l'électeur</h3>
+						<p>Documents must be in English or French (or Inuktitut in Nunavut) and in their original format. E-statement and e-invoice printouts are accepted and can also be shown on a mobile device.</p>
+						<p>Expired documents are accepted if they show the elector's name and current address. Documents to which the name or address have been added by hand are not accepted, unless they have been added by the issuer of the document.</p>
+						<p>Refer to <span class="subInfo">Have Your ID Ready</span> EC 90189 when you're not sure</p>
+						<table>
+							<col style="vertical-align: top; width:10%;">
+							<col style="width:90%;">
+							
+							<tr>
+								<th style="color: #8f23b3; vertical-align: top;">Option 1</th>
+								<td>Show driver's licence, provincial/terrirtorial ID card or any other government card with their photo, name and current address</td>
+							</tr>
+							<tr>
+								<th style="color: #8f23b3; vertical-align: top;">Option 2</th>
+								<td>Show 2 different pieces of ID from the list both with their name and at least one with their current address <br><span class="subInfo">They have to be different (2 bank statements for the same account are not accepted)</span></td>
+							</tr>
+							<tr>
+								<th style="color: #8f23b3; vertical-align: top;">Option 3</th>
+								<td>
+									Show 2 different pieces of ID from the list with their name and have another elector attest to their address. Both electors have to sign the <span class="subInfo">Oath of Residence Certificate</span><br> The attestor must
+									<ul>
+										<li>know the elector and where they live</li>
+										<li>live in the same polling division</li>
+										<li>be on the <span class="subInfo">List of Electors</span> or have a <span class="subInfo">Registration Certificate</span></li>
+										<li>show proof of identity and address</li>
+										<li>have not attested to another elector's address</li>
+										<li>have not had their own address attested to</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<div class="note">in some areas, ID may not show a residential address (e.g. PO box). If the address on their ID matches their address on the <span class="subInfo">List of Electors</span>, the document is accepted.</div>
+					</span>
+				</div>
+				<div class="content">
+					<div id="title8">
+						<div class="designBar"></div>
+						<h2>
+							<span class="ENG">Close your station</span>
+							<span class="FRE">Fermez votre poste de travail</span>
+						</h2>
+					</div>
+					<span class="ENG">
+						<p>Repeat these steps each day if you are working at advance polls.</p>
+						<ol>
+							<li>Finish serving electors at end of voting hours written at the front of this guidebook, and close doors
+								<div class="note">electors who arrive before this time are allowedto vote.</div>
+							</li>						
+							<li>Give the following items to CPs to put in <span class="subInfo">Large All-Purpose Envelope</span> EC 11520
+								<ul>
+									<li>Alphabetical List of Electors by Site</li>
+								</ul>
+							</li>						
+							<li>Give the following items to CPS
+								<ul>
+									<li>EC 50255 VIC Collection Box</li>
+									<li>EC 50111 Statement of the Electors Who Voted on Polling Day <span class="subInfo">(any that weren't picked up by representatives)</span></li>
+									<li>All other supplies</li>
+								</ul>
+							</li>						
+							<li>Do any other tasks CPS asks</li>
+						</ol>
+						<div class="note">you might be asked to witness the counting of ballots if you are working on election day.</div>
+					</span>
+					<span class="FRE">
+						<p>Répétez ces étapes chaque jour si vous travaillez au bureau de vote par anticipation.</p>
+						<ol>
+							<li>Finissez de servir les électeurs à la fin des heures de vote indiquées au début de ce guide et fermez les portes
+								<div class="note">les électeurs qui arrivent avant cette heure peuvent voter.</div>
+							</li>						
+							<li>Remettez le matériel suivant au SCS pour rangement dans la <span class="subInfo">Grande enveloppe tout usage</span> EC 11520
+								<ul>
+									<li>Liste électorale alphabétique par lieu de scrutin</li>
+								</ul>
+							</li>						
+							<li>Remettez le matériel suivant au SCS
+								<ul>
+									<li>EC 50255 Boîte pour la cueillette des CIÉ</li>
+									<li>EC 50111 Relevé des électeurs qui ont voté le jour du  scrutin<span class="subInfo">(relevés non recueillis par des représentants)</span></li>
+									<li>Tout le reste du matériel</li>
+								</ul>
+							</li>						
+							<li>Faites toute autre tâche que le SCS vous confie</li>
+						</ol>
+						<div class="note">si vous travaillez le jour de l'élection, il est possible qu'on vous demande d'assister comme témoin au comptage des bulletins de vote.</div>
+					</span>
+				</div>
+				<div class="content">
+					<div id="title9">
+						<div class="designBar"></div>
+						<h2>Find elector's polling station on List of Electors</h2>
+					</div>
+					<ol>
+						<li>Find the elector's name</li>
+						<li>Check that the address they gave you is the same</li>
+						<li>Find their polling station</li>
+					</ol>
+					<img src="io_images/alpha_list.jpg" alt="The alphabetical List of Electors by Polling Site document" longdesc="longdesc_LoE.html">
+				</div>
+				<div class="content">
+					<div id="title10">
+						<div class="designBar"></div>
+						<h2>Find elector's polling station on Poll Key</h2>
+					</div>
+					<p>Do this only if there is no Registration Officer at your polling place or when they are busy with other electors</p>
+					<ol>
+						<li>Ask them for their address and find their street name</li>
+						<li>Find the range of street numbers their street number belongs to</li>
+						<li>Find their polling station</li>
+						<li>Send them to their polling station
+							<div class="note">if their polling station is not at your polling place, send them to CPS.</div>
+						</li>
+					</ol>
+					<img src="io_images/poll_key.jpg" alt="The Revise Poll Key by Street document" longdesc="longdesc_PollKey.html">
+				</div>
+				<div class="content">
+					<div id="title11">
+						<div class="designBar"></div>
+						<h2>Other situations</h2>
+					</div>
+					<h3>Elector has Transfer Certificate</h3>
+					<p>These certificates (EC 10190 or EC 50052) allow them to vote at another polling station. They are used only on election day</p>
+					<ol>
+						<li>Find their polling station number on the certificate</li>
+						<li>Remind them they will need ID and to give the certificate to DRO</li>
+						<li>Send them to their polling station</li>
+					</ol>
+					<h3>Elector wants to be served in French</h3>
+					<ol>
+						<li>Say, "bonjour", and give them <span class="subInfo">Bilingual Welcome Card</span> EC 50145
+							<div class="note">the card asks them to show you ID and informs them they need ID to vote.</div>
+						</li>
+						<li>Find their name and polling station on the <span class="subInfo">List of Electors</span> using information on their ID or VIC</li>
+						<li>Send them to their polling station</li>
+						<li>If they are having difficulty, say "un moment s'il vous plaît" and ask CPS for help</li>
+					</ol>
+					<h3>Electors with disabilities</h3>
+					<p>You are legally required to accommodate electors with phyiscal, mental and developmental disabilities and serve them in a way that most respects their dignity.</p>
+					<p>Face the elector and speak calmly. Even if they have a hearing impairment, your natural facial expressions, gestures and body movements will help them understand.</p>
+					<p>If you see an elector who might need help</p>
+					<ol>
+						<li>Ask them politely if there is anything you can do to help</li>
+						<li>Listen carefully to what they say and be patient</li>
+						<li>Do whatever it is they ask you to do to assist them
+							<div class="note">service dogs are allowed inside the polling place.</div>
+						</li>
+					</ol>
+					<h3>Elector's VIC contains errors</h3>
+					<p>Inform them the error can be fixed with a <span class="subInfo">Correction Certificate</span> EC 50051. Send them to the Registration Officer, or their polling station, if there is no Registration Officer at your polling place.</p>
+				</div>
+				<div class="content">
+					<div id="title12">
+						<div class="designBar"></div>
+						<h2>Other information</h2>
+					</div>
+					<h3>Cell phones inside polling place</h3>
+					<p>Electors can use their cell phones inside the polling place if they do not disturb others.</p>
+					<h3>Elector wants to keep their VIC</h3>
+					<p>Electors can keep their VIC if they want. Inform them that Elections Canada works hard to keep elector information confidential and will dispose of VICs properly by shredding them.</p>
+					<h3>Media representatives and photographers</h3>
+					<p>Media representatives are not usually allowed inside a polling place. If there is an exception for your polling place you will receive special instructions.</p>
+					<p>If a media representative arrives without your prior knowledge</p>
+					<ul>
+						<li>ask them to wait outside</li>
+						<li>confirm with CPS that they are allowed to be in the polling place</li>
+					</ul>
+				</div>
+				<div class="content">
+					<div id="title13">
+						<div class="designBar"></div>
+						<h2>Offences and suspicious activities</h2>
+					</div>
+					<p>If you see someone</p>
+					<!-- <h3>If you see someone</h3> -->
+					<ul>
+						<li>destroy, vandalize or remove signs</li>
+						<li>destroy or vandalize a ballot or leave the polling place with one</li>
+						<li>destroy, take or interfere with a ballot box or ballot booklet</li>
+						<li>put anything in a ballot box that shouldn't be there</li>
+						<li>take a picture of a marked ballot and show the picture to others</li>
+						<li>take a ballot if it's not issued by a DRO or try to use a forged ballot</li>
+						<li>try to vote when not qualified or eligible</li>
+						<li>try to vote in another elector's name or try to vote twice</li>
+						<li>try to register or vote illegally, or encourage another person to do so</li>
+						<li>try to bribe or force someone to vote, to vote a certain way or to refrain from voting</li>
+						<li>intimidate or shove an elector, interrupt them voting, or prevent or try to prevent them from voting</li>
+						<li>pretend to be someone they are not, including a candidate or their representative, or encourage another person to do so</li>
+						<li>give out wrong information about a candidate or political party, when and where to vote, what ID to use or who is allowed to vote</li>
+					</ul>
+					<ol>
+						<li>Inform CPS right away</li>
+						<li>Give them as much detail as possible, such as person's name, address, time of incident, and any statements made by that person</li>
+						<li>Follow their instructions
+							<div class="note">you may be asked to write a detailed description of what happened.</div>
+						</li>
+					</ol>
+					<p>Ask CPS for help right away if</p>
+					<!-- <h3>Ask CPS for help right away if</h3> -->
+					<ul>
+						<li>something is suspicious, concerning, illegal or could prevent electors from voting</li>
+						<li>an election officer is not doing their job properly, seems to be turning away electors with correct ID or is preventing eligible electors from voting</li>
+						<li>a serious problem keeps happening or there is a suspicious pattern</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	<!-- </div> -->
+	<script type="text/javascript">
+		String.prototype.replaceBetween = function(start, end, what) {
+			return this.substring(0, start) + what + this.substring(end);
+		};
+	
+		// formats ec numbers
+		var mainBarText=document.getElementById("mainBar").innerHTML;	
+		
+		var totalEC = mainBarText.match(/EC/g)
+		var startingFrom = 0;
+		for(var j = 0; j < totalEC.length; j++){
+			var index = mainBarText.indexOf("EC", startingFrom);
+
+			if(!isNaN(mainBarText.substring(index+3, index+4))){
+				startingFrom = index+27;
+				var ecNum = mainBarText.substring(index, index+8);
+				var replacement = '<span class="highlight">'+ecNum+'</span>';
+				mainBarText = mainBarText.replaceBetween(index, index+8, replacement);
+				document.getElementById("mainBar").innerHTML = mainBarText;
+			}else{
+				startingFrom = index+1;
+			}
+		}
+
+		// formats note texts
+		var note = document.getElementsByClassName("note");
+		var noteText = document.getElementsByClassName("noteContent");
+		var indexLang = window.location.href.indexOf("lang", 0);
+		var temp = window.location.href.substring(indexLang+5, indexLang+7)
+
+		for (var i = 0; i < note.length; i++) {
+
+			if(temp == "en"){
+				var noteHeader="<div class='noteContent noteHeader'>Note</div>";
+			}else{
+				var noteHeader="<div class='noteContent noteHeader'>Nota</div>";
+			}
+			var noteBar='<div class="noteBar"></div>';
+			var noteText='<div class="noteContent noteText">';
+			// alert(note[i].innerHTML);
+			// noteText[i].innerHTML = noteHeader + noteText[i].innerHTML;
+			note[i].innerHTML = noteBar +'<div class="noteWrap">'+ noteHeader + noteText + note[i].innerHTML +"</div></div>"+ noteBar;
+		}
+	</script>
+</body>
+</html>

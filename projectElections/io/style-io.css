@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+a:link{
+	text-decoration: none;
+	color:#000;
+}
+
+a:visited {
+    color:#000;
+}
+
+a:hover {
+    color:#8f23b3;
+}
+
+a:active {
+    color:#8f23b3;
+}
+
+.titleBar{
+	background-color: #8f23b3;
+}
+
+.designBar{
+	background-color: #8f23b3;
+}
+
+
+.highlight{
+	color: #8f23b3;
+}
+
+.sideBarHighlight{
+	color: #8f23b3;
+	font-weight: bold;
+}
+
+.noteBar{
+	background-color: #8f23b3;
+}
+
+.noteHeader{
+	color: #8f23b3;
+}
+
+#content1 ul{
+	list-style-image: url('io_images/list_io.png');
+}
+
+#content1 ul ul{
+	list-style-image: none;
+	list-style-type: disc;
+}
+
+.content td{
+	vertical-align: top;
+}
+
+#content5 ul{
+	list-style-type: none;
+}
