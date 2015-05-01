@@ -9,7 +9,11 @@ $(document).ready(function(){
 	if(width > 640){
 		$(".sideBar").css("height", height-headerHeight)
 	}
-	alert(mobilecheck());
+	if(mobilecheck()){
+		$("h1").html("mobile");
+	}else{
+		$("h1").html("desktop");
+	}
 });
 
 
