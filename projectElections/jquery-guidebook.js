@@ -11,7 +11,7 @@ $(document).ready(function(){
 		$(".sideBar").css("height", height-headerHeight)
 	}
 
-	if(mobilecheck2){
+	if(mobilecheck())){
 		$("h1").html("mobile");
 		toMobile();
 	}else{
