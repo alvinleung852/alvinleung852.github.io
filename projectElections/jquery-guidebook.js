@@ -25,7 +25,7 @@ $(document).ready(function(){
 });
 
 function toMobile(){
-	$("body").css('padding', 10);
+	$("body").css('padding', 20);
 	$(".navigationLang").css('text-align', 'center');
 	$(".col").css("margin", "1% 0 1% 0%");
 	$(".header").css("position", "static");
@@ -39,6 +39,7 @@ function toMobile(){
 	$(".mobileNav").css("padding", "10px");
 	$(".mobileNav").css("overflow", "auto");
 	$(".mobileNav").css("display", "inline");
+	$(".menuButton").css("width", "10%");
 }
 
 window.mobilecheck = function() {
