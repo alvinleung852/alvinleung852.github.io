@@ -1,5 +1,5 @@
 flag=true;
-var mobilecheck2 = false;
+var mobilecheck2 = true;
 
 $(document).ready(function(){
 	var headerHeight = $('.header').height();
@@ -11,7 +11,7 @@ $(document).ready(function(){
 		$(".sideBar").css("height", height-headerHeight)
 	}
 
-	if(mobilecheck()){
+	if(mobilecheck2){
 		$("h1").html("mobile");
 		toMobile();
 	}else{
@@ -25,7 +25,7 @@ $(document).ready(function(){
 });
 
 function toMobile(){
-	$("body").css('padding', 5);
+	$("body").css('padding', 10);
 	$(".navigationLang").css('text-align', 'center');
 	$(".col").css("margin", "1% 0 1% 0%");
 	$(".header").css("position", "static");
@@ -38,6 +38,7 @@ function toMobile(){
 	$(".mobileNav").css("width", "80%");
 	$(".mobileNav").css("padding", "10px");
 	$(".mobileNav").css("overflow", "auto");
+	$(".mobileNav").css("display", "inline");
 }
 
 window.mobilecheck = function() {
