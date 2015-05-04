@@ -1,4 +1,5 @@
 flag=true;
+var mobilecheck2 = false;
 
 $(document).ready(function(){
 	var headerHeight = $('.header').height();
@@ -9,13 +10,35 @@ $(document).ready(function(){
 	if(width > 640){
 		$(".sideBar").css("height", height-headerHeight)
 	}
-	if(mobilecheck()){
+
+	if(mobilecheck())){
 		$("h1").html("mobile");
+		toMobile();
 	}else{
 		$("h1").html("desktop");
 	}
+	// if(mobilecheck()){
+	// 	$("h1").html("mobile");
+	// }else{
+	// 	$("h1").html("desktop");
+	// }
 });
 
+function toMobile(){
+	$("body").css('padding', 5);
+	$(".navigationLang").css('text-align', 'center');
+	$(".col").css("margin", "1% 0 1% 0%");
+	$(".header").css("position", "static");
+	$(".title").css("width", "100%");
+	$(".navigation").css("display", "none");
+	$("#mainBar").css("width", "100%");
+	$("#mainBar").css("margin-left", "0%");
+	$(".sideBar").css("display", "none");
+	$(".menuButton").css("display", "inline");
+	$(".mobileNav").css("width", "80%");
+	$(".mobileNav").css("padding", "10px");
+	$(".mobileNav").css("overflow", "auto");
+}
 
 window.mobilecheck = function() {
   var check = false;

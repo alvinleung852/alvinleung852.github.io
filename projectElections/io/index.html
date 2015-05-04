@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="style-io.css"/>
@@ -13,7 +13,111 @@
 
 <body>
 	<a href="#mainContent" class="skip">Skip to content</a>
-	<div class="menuButton"><img src="../images/menu_icon.png" alt=""></div>
+	<div class="menuButton" onclick="$('.mobileNav').focus()"><img src="../images/menu_icon.png" alt=""></div>
+	<div class="mobileNav" tabindex="1">
+		<div class="navigationLang">
+			<a href="#" onclick="changeLang(0)">English</a>
+			 | 
+			<a href="#" onclick="changeLang(1)">Français</a>
+		</div>
+		<div class="mobileSub">
+			<ul class="navigationIcons">
+				<li>
+					<a href="../index.html"><img src="../nav/home_n.png" alt="Navigate to home screen" 
+						onblur="this.src='../nav/home_n.png';"
+						onfocus="this.src='../nav/home_o.png';" 
+						onmouseover="this.src='../nav/home_o.png';" 
+						onmouseout="this.src='../nav/home_n.png';"></a>
+				</li>
+				<li>
+					<a href="#"><img src="../nav/cps_n.png" alt="Navigate to Central Poll Supervisor" 
+						onblur="this.src='../nav/cps_n.png';"
+						onfocus="this.src='../nav/cps_o.png';" 
+						onmouseover="this.src='../nav/cps_o.png';" 
+						onmouseout="this.src='../nav/cps_n.png';"></a>
+				</li>
+				<li>
+					<a href="#"><img src="../nav/dropc_n.png" alt="Navigate to Deputy Returning Officer and Poll Clerk" 
+						onblur="this.src='../nav/dropc_n.png';"
+						onfocus="this.src='../nav/dropc_o.png';" 
+						onmouseover="this.src='../nav/dropc_o.png';" 
+						onmouseout="this.src='../nav/dropc_n.png';"></a>
+				</li>
+				<li>
+					<a href="#"><img src="../nav/rego_n.png" alt="Navigate to Registration Officer" 
+						onblur="this.src='../nav/rego_n.png';"
+						onfocus="this.src='../nav/rego_o.png';" 
+						onmouseover="this.src='../nav/rego_o.png';" 
+						onmouseout="this.src='../nav/rego_n.png';"></a>
+				</li>
+				<li>
+					<a href="#"><img src="../nav/io_n.png" alt="Navigate to Information Officer" 
+						onblur="this.src='../nav/io_n.png';"
+						onfocus="this.src='../nav/io_o.png';" 
+						onmouseover="this.src='../nav/io_o.png';" 
+						onmouseout="this.src='../nav/io_n.png';"></a>
+				</li>
+			</ul>
+		</div>
+		<div class="designBar2"></div>
+		<div class="mobileSide mobileSub">
+			<ul style="list-style-type:circle">
+				<li><a href="#" onclick="$('#title1').scrollView();"><div class="topic1 sideBarHighlight">
+					<span class="ENG">List of supplies</span>
+					<span class="FRE">Liste de matériel</span>
+				</div></a></li>
+				<li><a href="#" onclick="$('#title2').scrollView();"><div class="topic2">
+					<span class="ENG">Get ready the night before</span>
+					<span class="FRE">Préparez-vous la veille</span>
+				</div></a></li>
+				<li><a href="#" onclick="$('#title3').scrollView();"><div class="topic3">
+					<span class="ENG">Set up your station</span>
+					<span class="FRE">Installez votre poste de travail</span>
+				</div></a></li>
+				<li><a href="#" onclick="$('#title4').scrollView();"><div class="topic4">
+					<span class="ENG">Organize supplies on your table</span>
+					<span class="FRE">Placez le matériel sur votre table</span>
+				</div></a></li>
+				<li><a href="#" onclick="$('#title5').scrollView();"><div class="topic5">
+					<span class="ENG">Serve electors</span>
+					<span class="FRE">Servez les électeurs</span>
+				</div></a></li>
+				<li><a href="#" onclick="$('#title6').scrollView();"><div class="topic6">
+					<span class="ENG">Candidates and their representatives</span>
+					<span class="FRE">Candidats et leurs représentants</span>
+				</div></a></li>
+				<li><a href="#" onclick="$('#title7').scrollView();"><div class="topic7">
+					<span class="ENG">Elector eligibility and identification</span>
+					<span class="FRE">Admissibilité et identification de l'électeur</span>
+				</div></a></li>
+				<li><a href="#" onclick="$('#title8').scrollView();"><div class="topic8">
+					<span class="ENG">Close your station</span>
+					<span class="FRE">Fermez votre poste de travail</span>
+				</div></a></li>
+				<li><a href="#" onclick="$('#title9').scrollView();"><div class="topic9">
+					<span class="ENG">Find elector's polling station on List of Electors</span>
+					<span class="FRE">Trouvez le bureau de vote d'un électeur sur la Liste électorale</span>
+				</div></a></li>
+				<li><a href="#" onclick="$('#title10').scrollView();"><div class="topic10">
+					<span class="ENG">Find elector's polling station on Poll Key</span>
+					<span class="FRE">Trouvez le bureau de vote d'un électeur dans l'Indicateur des sections de vote</span>
+				</div></a></li>
+				<li><a href="#" onclick="$('#title11').scrollView();"><div class="topic11">
+					<span class="ENG">Other situations</span>
+					<span class="FRE">Autres situations</span>
+				</div></a></li>
+				<li><a href="#" onclick="$('#title12').scrollView();"><div class="topic12">
+					<span class="ENG">Other information</span>
+					<span class="FRE">Autres renseignements</span>
+				</div></a></li>
+				<li><a href="#" onclick="$('#title13').scrollView();"><div class="topic13">
+					<span class="ENG">Offences and suspicious activities</span>
+					<span class="FRE">Infractions et activités suspectes</span>
+				</div></a></li>
+			</ul>
+		</div>
+	</div>
+
 	<!-- <div class="wrapper"> -->
 		<div class="header">
 			<div class="col title">
@@ -38,13 +142,6 @@
 							onmouseout="this.src='../nav/home_n.png';"></a>
 					</li>
 					<li>
-						<a href="#"><img src="../nav/ro_n.png" alt="Navigate to Returning Officer" 
-							onblur="this.src='../nav/ro_n.png';"
-							onfocus="this.src='../nav/ro_o.png';" 
-							onmouseover="this.src='../nav/ro_o.png';" 
-							onmouseout="this.src='../nav/ro_n.png';"></a>
-					</li>
-					<li>
 						<a href="#"><img src="../nav/cps_n.png" alt="Navigate to Central Poll Supervisor" 
 							onblur="this.src='../nav/cps_n.png';"
 							onfocus="this.src='../nav/cps_o.png';" 
@@ -52,18 +149,11 @@
 							onmouseout="this.src='../nav/cps_n.png';"></a>
 					</li>
 					<li>
-						<a href="#"><img src="../nav/dro_n.png" alt="Navigate to Deputy Returning Officer" 
-							onblur="this.src='../nav/dro_n.png';"
-							onfocus="this.src='../nav/dro_o.png';" 
-							onmouseover="this.src='../nav/dro_o.png';" 
-							onmouseout="this.src='../nav/dro_n.png';"></a>
-					</li>
-					<li>
-						<a href="#"><img src="../nav/pc_n.png" alt="Navigate to Poll Clerk" 
-							onblur="this.src='../nav/pc_n.png';"
-							onfocus="this.src='../nav/pc_o.png';" 
-							onmouseover="this.src='../nav/pc_o.png';" 
-							onmouseout="this.src='../nav/pc_n.png';"></a>
+						<a href="#"><img src="../nav/dropc_n.png" alt="Navigate to Deputy Returning Officer and Poll Clerk" 
+							onblur="this.src='../nav/dropc_n.png';"
+							onfocus="this.src='../nav/dropc_o.png';" 
+							onmouseover="this.src='../nav/dropc_o.png';" 
+							onmouseout="this.src='../nav/dropc_n.png';"></a>
 					</li>
 					<li>
 						<a href="#"><img src="../nav/rego_n.png" alt="Navigate to Registration Officer" 
@@ -80,7 +170,6 @@
 							onmouseout="this.src='../nav/io_n.png';"></a>
 					</li>
 				</ul>
-
 			</div>
 		</div>
 		<div class="body" id="mainContent">
