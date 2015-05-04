@@ -71,6 +71,7 @@ a.skip:hover {
     text-align: left;
     overflow: hidden;
     background-color: white;
+    display:none;
 }
 
 .mobileNav:active, 
@@ -352,6 +353,7 @@ a.skip:hover {
 		width: 100%;
 		padding: 10px;
 		overflow: auto;
+		display:inline;
 		/*font-size: 10pt;*/
 	}
 }
