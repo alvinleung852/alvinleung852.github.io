@@ -247,6 +247,7 @@ a.skip:hover {
 .note{
 	font-family: 'Nunito', sans-serif;
 	width: 100%;
+	font-size: 1em;
 }
 
 .noteHeader{

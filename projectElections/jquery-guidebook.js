@@ -12,10 +12,10 @@ $(document).ready(function(){
 	}
 
 	if(mobilecheck()){
-		$("h1").html("mobile");
+		// $("h1").html("mobile");
 		toMobile();
 	}else{
-		$("h1").html("desktop");
+		// $("h1").html("desktop");
 	}
 	// if(mobilecheck()){
 	// 	$("h1").html("mobile");
@@ -27,6 +27,7 @@ $(document).ready(function(){
 function toMobile(){
 	$("body").css('padding', 20);
 	$(".navigationLang").css('text-align', 'center');
+	$(".navigationLang").css('font-size', '2em');
 	$(".col").css("margin", "1% 0 1% 0%");
 	$(".header").css("position", "static");
 	$(".title").css("width", "100%");
@@ -40,6 +41,9 @@ function toMobile(){
 	$(".mobileNav").css("overflow", "auto");
 	$(".mobileNav").css("display", "inline");
 	$(".menuButton").css("width", "10%");
+	$(".noteHeader").css("width", "10%");
+	$(".noteText").css("width", "86%");
+	$("#content1").css("list-style-image", "io_images/list_io2.png");
 }
 
 window.mobilecheck = function() {
