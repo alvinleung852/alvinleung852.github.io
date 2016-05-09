@@ -1,0 +1,30 @@
+{
+    "convo1": {
+        "value1":"Hello, bonjour. Can I please have your name and address?",
+        "value2":"My name is Bobette Bobinson. I live at 123 Fake St, Youville"
+    },
+    "convo2": {
+        "value1":"Please may I see some ID with name and address?",
+        "value2":"/showID;Yes, here you go."
+    },
+    "convo3": {
+        "value1":"Your ID is acceptable, here is your ballot. Go behind the screen, and mark the circle for your candidate. Bring back the ballot folded the same way.",
+        "value2":"Great, thanks.",
+        "value3":"/elecOut;",
+        "value4":"/elecIn;Here is my ballot.",
+        "value5":"/goToCheck;"
+    },
+    "convo4": {
+        "value1":"Here is your ballot back",
+        "value2":"Great, thanks."
+    },
+    "convo5": {
+        "value1":"You are all done, thank you for voting.",
+        "value2":"Thank you, have a nice day.",
+        "value3":"/speechOut;"
+    },
+    "convo6": {
+        "value1":"/endText;Well done. You have served this elector correctly and recorded the necessary information.",
+        "value2":"/endText;"
+    }
+}
