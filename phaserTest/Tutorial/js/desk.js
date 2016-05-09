@@ -250,7 +250,7 @@ DeskState.prototype = {
                     tweenElector2.to({x:600}, 0, 'Cubic', true, 0);
                     break;
                 case 2:
-                    elector = game.add.sprite(800, -50, 'pcIdle');
+                    elector = game.add.sprite(800, -50, 'regoIdle');
                     elector.scale.setTo(5,5);
                     elector.animations.add('idle');
                     elector.animations.play('idle', 5, true);
@@ -407,6 +407,19 @@ DeskState.prototype = {
         }else if(gameText.text.substr(0,9) == "/endText;"){
             gameText.text = gameText.text.replace("/endText;", "");
             this.extraAnim(5);
+        }
+        else if(gameText.text.substr(0,10) == "/nextElec;"){
+            gameText.text = gameText.text.replace("/nextElec;", "");
+            electorNum++;
+            deskCount = 0;
+            game.state.start('Desk');
+            // formClick = false;
+            // convoCount = 0;
+            // created = false;
+            // isConvo = true;
+            
+            // this.loadElectorInfo(deskCount);
+            
         }
         // if(deskCount == 2 && convoCount == 1){
         //     ID = game.add.sprite(200, 200, 'ID1');

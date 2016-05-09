@@ -30,7 +30,11 @@ LoEState.prototype = {
             speechBubble1.scale.y *= 0.15;
             
             var style = { font: '20pt Arial', fill: '#ffffff', align: 'left', wordWrap: true, wordWrapWidth: 325, wordWrapHeight: 50 };
-            gameText = game.add.text(60, 70, convoText[1], style);
+            for(var i = 0; i < convoText.length; i++){
+                if(convoText[i].substr(0, 8) == "My name "){
+                    gameText = game.add.text(60, 70, convoText[i], style);
+                }
+            }
         }else if(deskCount == 4){
             
         }
