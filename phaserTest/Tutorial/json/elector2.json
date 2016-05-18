@@ -1,7 +1,7 @@
 {
     "convo1": {
-        "value1":"Hello, bonjour. Can I please have your name and address?",
-        "value2":"My name is Bobette Bobinson. I live at 123 Fake St, Youville"
+        "value1":"/elecIn;You: Hello, bonjour. Can I please have your name and address?",
+        "value2":"/elecOut;Elector: My name is Bobette Bobinson. I live at 123 Fake St, Youville"
     },
     "convo2": {
         "value1":"Please may I see some ID with name and address?",
@@ -25,6 +25,6 @@
     },
     "convo6": {
         "value1":"/endText;Well done. You have served this elector correctly and recorded the necessary information.",
-        "value2":"/endText;"
+        "value2":"/nextElec;"
     }
 }

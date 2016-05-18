@@ -6,50 +6,303 @@ var MenuState = function(){};
 var buttonRegO, buttonPC, buttonDRO, buttonIO, buttonCPS, buttonGroup, buttonStart, music, music3, tween;
 var boolRegO, boolPC, boolDRO, boolIO, boolCPS;
 var animRegO, animPC, animDRO, animCPS, animIO;
-var nameRegO, nameDRO, namePC, nameCPS, nameIO;
+var nameRegO, nameDRO, namePC, nameCPS, nameIO, namePos;
 var spriteRegO, spritePC, spriteDRO, spriteCPS, spriteIO;
 var position;
+var nameLabel;
+
+// var char4_3, char16_9;
+// var desk4_3, desk16_9, desk9_16;
+// var text4_3, text16_9, text9_16;
+// var tempBool;
+// var char, desk, text;
+// var charLabel, deskLabel, textLabel;
+// var textGroup, charGroup, deskGroup;
+var currAspectRatio;            // 0 = 4:3, 1 = 16:9, 2 = 9:16
+// var screenResolutions = [[800, 600], [1280, 720], [720, 1280]];
+// var charDimensions = [[0, 0],[0, 0],[-1000, -1000]];
+// var deskDimensions = [[0, 200],[0, 360],[0, 0]];
+// var textDimensions = [[0, 400],[800, 0],[0, 640]];
+// var scaleNum;
+// var textPadding = 10;
+// var elector;
+
+var cursors;
+var buttonArray = [];
+
+var buttonSelect = -1;
+var buttonLeftMechanic = 0;
+var buttonRightMechanic = 0;
+var buttonEnterMechanic = 0;
+
+var charSelected;
+var backgroundImg;
 
 MenuState.prototype = {
     create: function(){
         game.stage.backgroundColor = '#888888';
-        game.add.tileSprite(0, 0, 800, 600, 'background');
+        
+        backgroundImg = game.add.sprite(0, 0, 'background');
+        // game.add.tileSprite(0, 0, 800, 600, 'background');
+        
+        buttonSelect = -1
+        
+        currAspectRatio = 0;
+        charSelected = 0;
+        
+        // scaleNum = deskDimensions[0][1]/deskDimensions[1][1];
         
         buttonGroup = game.add.group();
+        buttonGroup.x = game.world.centerX-50;
+        buttonGroup.y = game.world.centerY-100;
         
-        var nameLabel = game.add.text(40, 40, 'Character Select', {font:'50px Arial', fill:'#ffffff'});
-        // button = game.add.button(0, 0, 'button', this.start, this, 1, 0, 2);
-
-        buttonRegO = game.add.button(game.world.centerX+27.5, 320, 'RegO', this.addRegO, this, 1, 0, 2);
-        buttonRegO.width = 135;
-        buttonRegO.height = 135;
+        nameLabel = game.add.text(40, 40, 'Character Select', {font:'50px Arial', fill:'#ffffff'});
+        
+        //Add character select buttons
+        buttonRegO = game.add.button(75, 125, 'RegO', this.addRegO, this, 1, 0, 2);
+        buttonRegO.scale.setTo(0.3, 0.3);
         buttonGroup.add(buttonRegO);
-        buttonPC = game.add.button(game.world.centerX+245, 200, 'PC', this.addPC, this, 1, 0, 2);
-        buttonPC.width = 135;
-        buttonPC.height = 135;
+        buttonPC = game.add.button(300, 0, 'PC', this.addPC, this, 1, 0, 2);
+        buttonPC.scale.setTo(0.3, 0.3);
         buttonGroup.add(buttonPC);
-        buttonDRO = game.add.button(game.world.centerX+100, 200, 'DRO', this.addDRO, this, 1, 0, 2);
-        buttonDRO.width = 135;
-        buttonDRO.height = 135;
+        buttonDRO = game.add.button(150, 0, 'DRO', this.addDRO, this, 1, 0, 2);
+        buttonDRO.scale.setTo(0.3, 0.3);
         buttonGroup.add(buttonDRO);
-        buttonIO = game.add.button(game.world.centerX+172.5, 320, 'IO', this.addIO, this, 1, 0, 2);
-        buttonIO.width = 135;
-        buttonIO.height = 135;
+        buttonIO = game.add.button(225, 125, 'IO', this.addIO, this, 1, 0, 2);
+        buttonIO.scale.setTo(0.3, 0.3);
         buttonGroup.add(buttonIO);
-        buttonCPS = game.add.button(game.world.centerX-45.5, 200, 'CPS', this.addCPS, this, 1, 0, 2);
-        buttonCPS.width = 135;
-        buttonCPS.height = 135;
+        buttonCPS = game.add.button(0, 0, 'CPS', this.addCPS, this, 1, 0, 2);
+        buttonCPS.scale.setTo(0.3, 0.3);
         buttonGroup.add(buttonCPS);
-        // this.playBGM();
+        
+        this.playBGM();
+        
+        //Add start buttons and hide
+        buttonStart = game.add.button(223.5, 350, 'button', this.start, this, 1, 0, 2);
+        buttonStart.anchor.setTo(0.5, 1);
+        buttonStart.visible = false;
+        
+        //Add buttons to button array
+        buttonArray.push(buttonCPS);
+        buttonArray.push(buttonDRO);
+        buttonArray.push(buttonPC);
+        buttonArray.push(buttonRegO);
+        buttonArray.push(buttonIO);
+        
+        // cursors = game.input.keyboard.createCursorKeys();
+        cursors = game.input.keyboard.addKeys( { 'up': Phaser.KeyCode.UP, 'down': Phaser.KeyCode.DOWN, 'left': Phaser.KeyCode.LEFT, 'right': Phaser.KeyCode.RIGHT, 'enter':Phaser.KeyCode.ENTER } );
     }, 
     
-    start: function(){
-        this.playSelect();
-        game.state.start('Desk');
+    update: function(){
+        // nameLabel.setText(buttonSelect);
         
+        var screenRatio = window.innerWidth/ window.innerHeight;
+        
+        if(charSelected == 1){
+            buttonStart.visible = true;
+            buttonGroup.add(buttonStart);
+            buttonArray.push(buttonStart);
+            charSelected = 2;
+        }
+        
+        if(screenRatio > 1.33 && currAspectRatio != 1){  
+            game.scale.setGameSize(1280, 720);
+            
+            //Adjust onscreen elements
+            buttonGroup.scale.setTo(1.25, 1.25);
+            buttonGroup.x = game.world.centerX-50;
+            buttonGroup.y = game.world.centerY-200;
+            backgroundImg.loadTexture('background2');
+            if(charSelected == 2){
+                namePos.scale.setTo(0.25, 0.25);
+                namePos.x = 0;
+                namePos.y = 400;
+            }
+            
+            currAspectRatio = 1;
+        }
+        else if(screenRatio < 1.33 && screenRatio > 0.5625 && currAspectRatio != 0){    
+            game.scale.setGameSize(800, 600);
+            
+            //Adjust onscreen elements
+            buttonGroup.scale.setTo(1, 1);
+            buttonGroup.x = game.world.centerX-50;
+            buttonGroup.y = game.world.centerY-100;
+            backgroundImg.loadTexture('background');
+            if(charSelected == 2){
+                namePos.scale.setTo(0.25, 0.25);
+                namePos.x = 0;
+                namePos.y = 400;
+            }
+            
+            currAspectRatio = 0;
+        }
+        else if(screenRatio < 0.5625  && currAspectRatio != 2){  
+            game.scale.setGameSize(720, 1280);
+            
+            //Adjust onscreen elements
+            buttonGroup.scale.setTo(1.25, 1.25);
+            buttonGroup.x = 100;
+            buttonGroup.y = 700;
+            backgroundImg.loadTexture('background3');
+            if(charSelected == 2){
+                namePos.scale.setTo(0.4, 0.4);
+                namePos.x = 0;
+                namePos.y = 550;
+            }
+            
+            currAspectRatio = 2;
+        }
+        
+        //If right arrow pressed
+        if (cursors.right.isDown){
+            buttonRightMechanic = 1;
+        }else if(buttonRightMechanic == 1){
+            buttonSelect++;
+            if(buttonSelect == buttonArray.length){
+                buttonSelect = 0;
+            }
+            for(var i = 0; i < buttonArray.length; i++){
+                if(i == buttonSelect){
+                    buttonArray[i].frame = 1;
+                }else{
+                    buttonArray[i].frame = 0;
+                }
+            }
+            buttonRightMechanic = 0;
+        }
+        
+        //If left arrow pressed
+        if (cursors.left.isDown){
+            buttonLeftMechanic = 1;
+        }else if(buttonLeftMechanic == 1){
+            buttonSelect--;
+            if(buttonSelect < 0){
+                buttonSelect = buttonArray.length-1;
+            }
+            for(var i = 0; i < buttonArray.length; i++){
+                if(i == buttonSelect){
+                    buttonArray[i].frame = 1;
+                }else{
+                    buttonArray[i].frame = 0;
+                }
+            }
+            buttonLeftMechanic = 0;
+        }
+        
+        //If enter key pressed
+        if(cursors.enter.isDown){
+            buttonEnterMechanic = 1;
+        }else if(buttonEnterMechanic == 1){
+            switch(buttonSelect){
+                case 0:
+                    this.addCPS();
+                    break;
+                case 1:
+                    this.addDRO();
+                    break;
+                case 2:
+                    this.addPC();
+                    break;
+                case 3:
+                    this.addRegO();
+                    break;
+                case 4:
+                    this.addIO();
+                    break;
+                case 5:
+                    this.start();
+                    break;
+            }
+            buttonEnterMechanic = 0;
+        }
+        
+        //On mouse over button
+        buttonRegO.events.onInputOver.add(this.overRegO, this);
+        buttonPC.events.onInputOver.add(this.overPC, this);
+        buttonDRO.events.onInputOver.add(this.overDRO, this);
+        buttonIO.events.onInputOver.add(this.overIO, this);
+        buttonCPS.events.onInputOver.add(this.overCPS, this);
+        
+        //On mouse out of button
+        buttonRegO.events.onInputOut.add(this.outButton, this);
+        buttonPC.events.onInputOut.add(this.outButton, this);
+        buttonDRO.events.onInputOut.add(this.outButton, this);
+        buttonIO.events.onInputOut.add(this.outButton, this);
+        buttonCPS.events.onInputOut.add(this.outButton, this);
+        
+        game.world.bringToTop(buttonGroup);
+    },
+    
+    start: function(){
+        // alert('start');
+        this.playSelect();
+        // game.state.start('intro-rego');
+        if(position == "RegO"){
+            game.state.start('intro-rego');
+        }else if(position == "IO"){
+            game.state.start('Statement');
+        }else if(position == "DRO"){
+            game.state.start('LoE');
+        }
+    },
+    
+    outButton: function(){
+        buttonRegO.frame = 0;
+        buttonPC.frame = 0;
+        buttonDRO.frame = 0;
+        buttonIO.frame = 0;
+        buttonCPS.frame = 0;
+        buttonStart.frame = 0;
+    },
+    
+    overRegO: function(){
+        // buttonRegO.frame = 0;
+        buttonPC.frame = 0;
+        buttonDRO.frame = 0;
+        buttonIO.frame = 0;
+        buttonCPS.frame = 0;
+        buttonStart.frame = 0;
+    },
+    
+    overPC: function(){
+        buttonRegO.frame = 0;
+        // buttonPC.frame = 0;
+        buttonDRO.frame = 0;
+        buttonIO.frame = 0;
+        buttonCPS.frame = 0;
+        buttonStart.frame = 0;
+    },
+    
+    overDRO: function(){
+        buttonRegO.frame = 0;
+        buttonPC.frame = 0;
+        // buttonDRO.frame = 0;
+        buttonIO.frame = 0;
+        buttonCPS.frame = 0;
+        buttonStart.frame = 0;
+    },
+    
+    overIO: function(){
+        buttonRegO.frame = 0;
+        buttonPC.frame = 0;
+        buttonDRO.frame = 0;
+        // buttonIO.frame = 0;
+        buttonCPS.frame = 0;
+        buttonStart.frame = 0;
+    },
+    
+    overCPS: function(){
+        buttonRegO.frame = 0;
+        buttonPC.frame = 0;
+        buttonDRO.frame = 0;
+        buttonIO.frame = 0;
+        // buttonCPS.frame = 0;
+        buttonStart.frame = 0;
     },
     
     addRegO: function(){
+        // alert('rego');
         if(!boolRegO){
             this.destroyAnim();
             spriteRegO = game.add.sprite(-11, 99.5, 'regO_pose1');
@@ -61,14 +314,20 @@ MenuState.prototype = {
             animRegO.play(24, false);
             buttonRegO.setFrames(1, 1, 1);
             boolRegO = true;
-            nameRegO = game.add.sprite(-400, 400, 'RegOName');
-            nameRegO.width = 400;
-            nameRegO.height = 35;
-            tween = game.add.tween(nameRegO);
+            if(currAspectRatio == 2){
+                namePos = game.add.sprite(-400, 550, 'RegOName');
+                namePos.scale.setTo(0.4, 0.4);
+            }else{
+                namePos = game.add.sprite(-400, 400, 'RegOName');
+                namePos.scale.setTo(0.25, 0.25);
+            }
+            tween = game.add.tween(namePos);
             tween.to({x:0}, 200, 'Cubic', true, 0);
-            buttonStart = game.add.button(450, 500, 'button', this.start, this, 1, 0, 2);
             this.resetWorker("boolRegO");
             position = "RegO";
+            if(charSelected == 0){
+                charSelected  = 1;
+            }
         }
         this.playSelect();
     },
@@ -85,14 +344,20 @@ MenuState.prototype = {
             animPC.play(10, false);
             buttonPC.setFrames(1, 1, 1);
             boolPC = true;
-            namePC = game.add.sprite(-400, 400, 'PCName');
-            namePC.width = 400;
-            namePC.height = 35;
-            tween = game.add.tween(namePC);
+            if(currAspectRatio == 2){
+                namePos = game.add.sprite(-400, 550, 'PCName');
+                namePos.scale.setTo(0.4, 0.4);
+            }else{
+                namePos = game.add.sprite(-400, 400, 'PCName');;
+                namePos.scale.setTo(0.25, 0.25);
+            }
+            tween = game.add.tween(namePos);
             tween.to({x:0}, 200, 'Cubic', true, 0);
-            buttonStart = game.add.button(450, 500, 'button', this.start, this, 1, 0, 2);
             this.resetWorker("boolPC");
             position = "PC";
+            if(charSelected == 0){
+                charSelected  = 1;
+            }
         }
         this.playSelect();
     },
@@ -109,14 +374,20 @@ MenuState.prototype = {
             animDRO.play(10, false);
             buttonDRO.setFrames(1, 1, 1);
             boolDRO = true;
-            nameDRO = game.add.sprite(-400, 400, 'DROName');
-            nameDRO.width = 400;
-            nameDRO.height = 35;
-            tween = game.add.tween(nameDRO);
+            if(currAspectRatio == 2){
+                namePos = game.add.sprite(-400, 550, 'DROName');
+                namePos.scale.setTo(0.4, 0.4);
+            }else{
+                namePos = game.add.sprite(-400, 400, 'DROName');
+                namePos.scale.setTo(0.25, 0.25);
+            }
+            tween = game.add.tween(namePos);
             tween.to({x:0}, 200, 'Cubic', true, 0);
-            buttonStart = game.add.button(450, 500, 'button', this.start, this, 1, 0, 2);
             this.resetWorker("boolDRO");
             position = "DRO";
+            if(charSelected == 0){
+                charSelected  = 1;
+            }
         }
         this.playSelect();
     },
@@ -133,14 +404,20 @@ MenuState.prototype = {
             animCPS.play(10, false);
             buttonCPS.setFrames(1, 1, 1);
             boolCPS = true;
-            nameCPS = game.add.sprite(-400, 400, 'CPSName');
-            nameCPS.width = 400;
-            nameCPS.height = 35;
-            tween = game.add.tween(nameCPS);
+            if(currAspectRatio == 2){
+                namePos = game.add.sprite(-400, 550, 'CPSName');
+                namePos.scale.setTo(0.4, 0.4);
+            }else{
+                namePos = game.add.sprite(-400, 400, 'CPSName');
+                namePos.scale.setTo(0.25, 0.25);
+            }
+            tween = game.add.tween(namePos);
             tween.to({x:0}, 200, 'Cubic', true, 0);
-            buttonStart = game.add.button(450, 500, 'button', this.start, this, 1, 0, 2);
             this.resetWorker("boolCPS");
             position = "CPS";
+            if(charSelected == 0){
+                charSelected  = 1;
+            }
         }
         this.playSelect();
     },
@@ -157,14 +434,20 @@ MenuState.prototype = {
             animIO.play(10, false);
             buttonIO.setFrames(1, 1, 1);
             boolIO = true;
-            nameIO = game.add.sprite(-400, 400, 'IOName');
-            nameIO.width = 400;
-            nameIO.height = 35;
-            tween = game.add.tween(nameIO);
+            if(currAspectRatio == 2){
+                namePos = game.add.sprite(-400, 550, 'IOName');
+                namePos.scale.setTo(0.4, 0.4);
+            }else{
+                namePos = game.add.sprite(-400, 400, 'IOName');
+                namePos.scale.setTo(0.25, 0.25);
+            }
+            tween = game.add.tween(namePos);
             tween.to({x:0}, 200, 'Cubic', true, 0);
-            buttonStart = game.add.button(450, 500, 'button', this.start, this, 1, 0, 2);
             this.resetWorker("boolIO");
             position = "IO";
+            if(charSelected == 0){
+                charSelected  = 1;
+            }
         }
         this.playSelect();
     },
@@ -172,7 +455,7 @@ MenuState.prototype = {
     playSelect: function(){
         music = game.add.audio('menuSelect');
         music.loop = false;
-        // music.play();
+        music.play();
     },
     
     playBGM: function(){
@@ -181,9 +464,7 @@ MenuState.prototype = {
         // music3.play();
     },
     
-    update: function(){
-        game.world.bringToTop(buttonGroup);
-    },
+    
     
     resetWorker: function(bool){
         if(bool == "boolRegO"){
@@ -239,36 +520,31 @@ MenuState.prototype = {
         if(boolRegO){
             animRegO.destroy();
             spriteRegO.destroy();
-            nameRegO.destroy();
-            buttonStart.destroy();
+            namePos.destroy();
         }
         
         if(boolPC){
             animPC.destroy();
             spritePC.destroy();
-            namePC.destroy();
-            buttonStart.destroy();
+            namePos.destroy();
         }
         
         if(boolDRO){
             animDRO.destroy();
             spriteDRO.destroy();
-            nameDRO.destroy();
-            buttonStart.destroy();
+            namePos.destroy();
         }
         
         if(boolCPS){
             animCPS.destroy();
             spriteCPS.destroy();
-            nameCPS.destroy();
-            buttonStart.destroy();
+            namePos.destroy();
         }
         
         if(boolIO){
             animIO.destroy();
             spriteIO.destroy();
-            nameIO.destroy();
-            buttonStart.destroy();
+            namePos.destroy();
         }
     },
     

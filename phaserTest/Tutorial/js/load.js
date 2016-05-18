@@ -1,31 +1,35 @@
 /* global
-game
+game, Phaser
 */
 
 var LoadState = function(){};
 
 LoadState.prototype = {
     preload: function(){
+        
+		
         var loadingLabel = game.add.text(80, 150, 'loading...', {font:'30px Courier', fill:'#ffffff'});
         
-        game.load.image('player', 'assets/yellow.png');
-        game.load.image('win', 'assets/grey.png');
+        // game.load.image('player', 'assets/yellow.png');
+        // game.load.image('win', 'assets/grey.png');
         game.load.spritesheet('button', 'assets/button-start-spritesheet.png', 201, 71.67)
         game.load.spritesheet('PC', 'assets/images/PollWorkers/PC_spritesheet.png', 490, 487);
         game.load.spritesheet('CPS', 'assets/images/PollWorkers/CPS_spritesheet.png', 490, 487);
         game.load.spritesheet('DRO', 'assets/images/PollWorkers/DRO_spritesheet.png', 490, 487);
         game.load.spritesheet('IO', 'assets/images/PollWorkers/IO_spritesheet.png', 490, 487);
         game.load.spritesheet('RegO', 'assets/images/PollWorkers/RegO_spritesheet.png', 490, 487);
-        game.load.image('regO', 'assets/images/regO3.png');
+        // game.load.image('regO', 'assets/images/regO3.png');
         game.load.audio('menuSelect', 'assets/sfx/menu-select.mp3');
         game.load.audio('menuError', 'assets/sfx/menu_error.wav');
         game.load.audio('arcadeSong', 'assets/sfx/arcade-loop.wav');
+        game.load.audio('typeSound', 'assets/sfx/type.wav');
+        game.load.audio('typeSelect', 'assets/sfx/text-select.wav');
         // game.load.atlasJSONHash('bot', 'assets/images/running_bot.png', 'assets/images/running_bot.json');
         // game.load.spritesheet('mummy', 'assets/images/metalslug_mummy37x45.png', 37, 45, 18);
         // game.load.spritesheet('monster', 'assets/images/metalslug_monster39x40.png', 39, 40, 16);
         // game.load.spritesheet('explosion', 'assets/images/explosion.png', 64, 64, 25);
-        game.load.spritesheet('regoIdle', 'assets/images/PollWorkers/sprites-regO.png', 144, 144, 5);
-        game.load.spritesheet('regoSpawn', 'assets/images/PollWorkers/sprites-regO2.png', 144, 144, 5);
+        // game.load.spritesheet('regoIdle', 'assets/images/PollWorkers/sprites-regO.png', 144, 144, 5);
+        // game.load.spritesheet('regoSpawn', 'assets/images/PollWorkers/sprites-regO2.png', 144, 144, 5);
         game.load.spritesheet('pcIdle', 'assets/images/PollWorkers/sprites-pc.png', 144, 144, 5);
         game.load.spritesheet('pcSpawn', 'assets/images/PollWorkers/sprites-pc2.png', 144, 144, 5);
         game.load.spritesheet('droIdle', 'assets/images/PollWorkers/sprites-dro.png', 144, 144, 5);
@@ -40,22 +44,28 @@ LoadState.prototype = {
         game.load.image('CPSName', 'assets/images/PollWorkers/CPS_name.png');
         game.load.image('IOName', 'assets/images/PollWorkers/IO_name.png');
         game.load.image('background', 'assets/images/background.png');
+        game.load.image('background2', 'assets/images/background2.png');
+        game.load.image('background3', 'assets/images/background3.png');
         game.load.image('backgroundL', 'assets/images/background_light.png');
         
         game.load.image('desk', 'assets/images/Desk/desk.png');
+        game.load.image('textBox_4_3', 'assets/images/Desk/textBox_4_3.png');
+        game.load.image('textBox_16_9', 'assets/images/Desk/textBox_16_9.png');
+        game.load.image('textBox_9_16', 'assets/images/Desk/textBox_9_16.png');
         
         game.load.image('electorImg1', 'assets/images/Desk/elector1.png');
         game.load.image('electorImg2', 'assets/images/Desk/elector2.png');
         
-        game.load.image('speechBubble1', 'assets/images/Desk/speechBubble1.png');
-        game.load.image('speechBubble2', 'assets/images/Desk/speechBubble2.png');
-        game.load.image('speechBubble3', 'assets/images/Desk/speechBubble3.png');
-        game.load.image('speechBubble4', 'assets/images/Desk/speechBubble4.png');
+        // game.load.image('speechBubble1', 'assets/images/Desk/speechBubble1.png');
+        // game.load.image('speechBubble2', 'assets/images/Desk/speechBubble2.png');
+        // game.load.image('speechBubble3', 'assets/images/Desk/speechBubble3.png');
+        // game.load.image('speechBubble4', 'assets/images/Desk/speechBubble4.png');
         // game.load.image('form1', 'assets/images/Desk/form1.png');
         game.load.spritesheet('form1', 'assets/images/Desk/form3.png', 348, 490);
         game.load.spritesheet('form2', 'assets/images/Desk/form5.png', 496, 354);
         game.load.spritesheet('form6', 'assets/images/Desk/form6.png', 348, 490);
         game.load.spritesheet('nextButton', 'assets/images/Desk/nextButton.png', 92, 90);
+        game.load.spritesheet('nextButton3', 'assets/images/Desk/nextButton3.png', 214, 326);
         
         game.load.image('imgLoE', 'assets/images/Desk/LoE.png');
         game.load.image('imgStatement', 'assets/images/Desk/statementVote.png');
@@ -70,8 +80,8 @@ LoadState.prototype = {
         game.load.image('ID2', 'assets/images/Desk/ID2.png');
         game.load.image('ID3', 'assets/images/Desk/ID3.png');
         
-        game.load.spritesheet('buttonYes', 'assets/images/Desk/buttonYes.png', 658, 500);
-        game.load.spritesheet('buttonNo', 'assets/images/Desk/buttonNo.png', 658, 500);
+        game.load.spritesheet('buttonYes', 'assets/images/Desk/buttonYes.png', 264, 143);
+        game.load.spritesheet('buttonNo', 'assets/images/Desk/buttonNo.png', 178, 140);
         
         game.load.spritesheet('issue1', 'assets/images/Issue/issue1_spritesheet.png', 1000, 509);
         game.load.spritesheet('issue2', 'assets/images/Issue/issue2_spritesheet.png', 987, 410, 30);
@@ -82,18 +92,33 @@ LoadState.prototype = {
         game.load.spritesheet('buttonNext', 'assets/images/Issue/buttonNext.png', 172, 281);
         game.load.spritesheet('buttonBack', 'assets/images/Issue/buttonBack.png', 172, 281);
         
+        game.load.image('LoEClick', 'assets/images/Desk/LoEClick.png', 620, 23);
+        
+        game.load.image('clickArea_1_1', 'assets/images/Desk/clickArea_1_1.png', 100, 100);
+        
         game.load.spritesheet('regO_pose1', 'assets/images/PollWorkers/RegO_Pose1_2.png', 494, 863, 6);
         game.load.spritesheet('regO_pose2', 'assets/images/PollWorkers/RegO_Pose2_1.png', 499, 891, 24);
         
         game.load.json('elector1', 'json/elector1.json');
         game.load.json('elector2', 'json/elector2.json');
+        
+        game.load.image('intro_RegO', 'assets/images/PollWorkers/intro_RegO.png', 1000, 509);
+        game.load.image('intro_RegO2', 'assets/images/PollWorkers/intro_RegO2.png', 1000, 123);
+        game.load.image('intro_RegO3', 'assets/images/PollWorkers/intro_RegO3.png', 1500, 1023);
+        
+        game.load.image('elecHand', 'assets/images/Desk/elecHand.png', 332, 250);
+        
+        game.load.image('ballot', 'assets/images/Desk/ballot.png', 71, 155);
+        game.load.image('ballotBox', 'assets/images/Desk/ballotBox.png', 446, 525);
     },
     
     create: function(){
         game.state.start('Menu');
-        // this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-        // this.scale.pageAlignHorizontally = true;
-        // this.scale.pageAlignVertically = true;
-        // this.scale.setScreenSize(true);
-    }
+        // game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+// 		game.scale.setScreenSize(true);
+        this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+        this.scale.pageAlignHorizontally = true;
+        this.scale.pageAlignVertically = true;
+        this.scale.setScreenSize(true);
+    },
 };

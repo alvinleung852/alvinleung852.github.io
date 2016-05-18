@@ -1,31 +1,33 @@
 {
     "convo1": {
-        "value1":"/turn;Howdy mate, I'd like to vote today",
-        "value2":"Hello, bonjour. Can I please have your name and address?",
-        "value3":"My name is Bob McBobson. I live at 532 rue Binton, Youville"
+        "value1":"/elecGone;Welcome to your desk, let's begin by processing an elector!",
+        "value2":"/elecIn;Elector: Howdy mate, I'd like to vote today.",
+        "value3":"You: Hello, bonjour. Can I please have your name and address?",
+        "value4":"Elector: My name is Bob McBobson. I live at 532 rue Binton, Youville"  
     },
     "convo2": {
-        "value1":"Please may I see some ID with name and address?",
-        "value2":"/showID;Yes, here you go."
+        "value1":"You: Please may I see some ID with name and address?",
+        "value2":"/showID;Elector: Yes, here you go."
     },
     "convo3": {
-        "value1":"Your ID is acceptable, here is your ballot. Go behind the screen, and mark the circle for your candidate. Bring back the ballot folded the same way.",
-        "value2":"Great, thanks.",
-        "value3":"/elecOut;",
-        "value4":"/elecIn;Here is my ballot.",
-        "value5":"/goToCheck;"
+        "value1":"You: Your ID is acceptable, here is your ballot.",
+        "value2":"/giveBallot;You: Go behind the screen, and mark the circle for your candidate. Bring back the ballot folded the same way.",
+        "value3":"Elector: Great, thanks.",
+        "value4":"/elecOut;",
+        "value5":"/elecIn;Elector: Here is my ballot.",
+        "value6":"/goToCheck;"
     },
     "convo4": {
-        "value1":"Here is your ballot back",
-        "value2":"Great, thanks."
+        "value1":"You: Here is your ballot back",
+        "value2":"/giveBallot;Elector: Great, thanks.",
+        "value3":"/ballotBox;"
     },
     "convo5": {
-        "value1":"You are all done, thank you for voting.",
-        "value2":"Thank you, have a nice day.",
-        "value3":"/speechOut;"
+        "value1":"You: You are all done, thank you for voting.",
+        "value2":"Elector: Thank you, have a nice day.",
+        "value3":"/elecOut;"
     },
     "convo6": {
-        "value1":"/endText;Well done. You have served this elector correctly and recorded the necessary information.",
-        "value2":"/endText;"
+        "value1":"/elecGone;Well done. You have served this elector correctly and recorded the necessary information."
     }
 }
